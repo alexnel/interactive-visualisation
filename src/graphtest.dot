@@ -1,0 +1,7 @@
+digraph test{
+	
+	a->b;
+	b->c;
+	c->a;
+
+}
