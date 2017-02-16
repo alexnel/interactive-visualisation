@@ -1,0 +1,217 @@
+
+==================== FINAL INTERFACE ====================
+2017-02-14 08:36:46.742388 UTC
+
+interface main@main:WriteRunDot 8002
+  interface hash: 3bb7ee27bc2b91a7f1a43967b9d619bd
+  ABI hash: cd7e7ea4389bc13a88c37e595ce14f59
+  export-list hash: 8b8cb919117316c02e392a40a10d879d
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 1462937948e66136ab2c7cbf9e115f98
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  WriteRunDot.createImage
+  WriteRunDot.createImageInDir
+  WriteRunDot.doDots
+module dependencies:
+package dependencies: array-0.5.1.1@array-0.5.1.1 base-4.9.1.0
+                      base-compat-0.9.1@base-compat-0.9.1-B9geVZFtCvE8ERS7UcvkRz
+                      binary-0.8.3.0@binary-0.8.3.0
+                      bytestring-0.10.8.1@bytestring-0.10.8.1
+                      colour-2.3.3@colour-2.3.3-7zspnmhVLMd3uThUzy60rY
+                      containers-0.5.7.1@containers-0.5.7.1
+                      deepseq-1.4.2.0@deepseq-1.4.2.0 directory-1.3.0.0@directory-1.3.0.0
+                      dlist-0.8.0.2@dlist-0.8.0.2-6Wnps4GD7EFnRucVzXIFD
+                      exceptions-0.8.3@exceptions-0.8.3-ADEDRATtUrMK1JW4zMQ9U
+                      fgl-5.5.3.0@fgl-5.5.3.0-2sNS3Wnitgh1EFrdBQMbFh
+                      filepath-1.4.1.1@filepath-1.4.1.1
+                      ghc-boot-th-8.0.2@ghc-boot-th-8.0.2 ghc-prim-0.5.0.0
+                      graphviz-2999.18.1.2@graphviz-2999.18.1.2-I9dmpFhAddS1sgi4qbfiqU
+                      integer-gmp-1.0.0.1 mtl-2.2.1@mtl-2.2.1-BLKBelFsPB3BoFeSWSOYj6
+                      polyparse-1.12@polyparse-1.12-Ee2dhxWFCj0JUfsZIQidEE
+                      process-1.4.3.0@process-1.4.3.0
+                      stm-2.4.4.1@stm-2.4.4.1-JQn4hNPyYjP5m9AcbI88Ve
+                      template-haskell-2.11.1.0
+                      temporary-1.2.0.4@temporary-1.2.0.4-IIsg6ZMPNLX2bbJdNFhbfn
+                      text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR
+                      time-1.6.0.1@time-1.6.0.1 transformers-0.5.2.0@transformers-0.5.2.0
+                      unix-2.7.2.1@unix-2.7.2.1
+                      wl-pprint-text-1.1.1.0@wl-pprint-text-1.1.1.0-CFL1vWpEhp9Dz8zEyP0Jvc
+orphans: base-4.9.1.0:GHC.Base base-4.9.1.0:GHC.Float
+         binary-0.8.3.0@binary-0.8.3.0:Data.Binary.Generic
+         bytestring-0.10.8.1@bytestring-0.10.8.1:Data.ByteString.Builder
+         colour-2.3.3@colour-2.3.3-7zspnmhVLMd3uThUzy60rY:Data.Colour
+         graphviz-2999.18.1.2@graphviz-2999.18.1.2-I9dmpFhAddS1sgi4qbfiqU:Data.GraphViz.Printing
+         stm-2.4.4.1@stm-2.4.4.1-JQn4hNPyYjP5m9AcbI88Ve:Control.Monad.STM
+         text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text
+         text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text.Lazy
+         text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text.Show
+         time-1.6.0.1@time-1.6.0.1:Data.Time.Calendar.Gregorian
+         time-1.6.0.1@time-1.6.0.1:Data.Time.Format.Parse
+         time-1.6.0.1@time-1.6.0.1:Data.Time.LocalTime.LocalTime
+         transformers-0.5.2.0@transformers-0.5.2.0:Control.Monad.Trans.Error
+         wl-pprint-text-1.1.1.0@wl-pprint-text-1.1.1.0-CFL1vWpEhp9Dz8zEyP0Jvc:Text.PrettyPrint.Leijen.Text.Monadic
+family instance modules: base-4.9.1.0:Control.Applicative
+                         base-4.9.1.0:Data.Complex base-4.9.1.0:Data.Either
+                         base-4.9.1.0:Data.Functor.Const base-4.9.1.0:Data.Functor.Identity
+                         base-4.9.1.0:Data.List.NonEmpty base-4.9.1.0:Data.Monoid
+                         base-4.9.1.0:Data.Semigroup base-4.9.1.0:Data.Type.Equality
+                         base-4.9.1.0:Data.Version base-4.9.1.0:Data.Void
+                         base-4.9.1.0:GHC.Exts base-4.9.1.0:GHC.Generics
+                         base-4.9.1.0:GHC.IO.Exception base-4.9.1.0:GHC.TypeLits
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntMap.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntSet.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Map.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Sequence
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Set.Base
+                         dlist-0.8.0.2@dlist-0.8.0.2-6Wnps4GD7EFnRucVzXIFD:Data.DList
+                         ghc-boot-th-8.0.2@ghc-boot-th-8.0.2:GHC.LanguageExtensions.Type
+                         template-haskell-2.11.1.0:Language.Haskell.TH.Syntax
+                         text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text
+                         text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text.Lazy
+import  -/  base-4.9.1.0:Control.Monad a6784c5dab0d75c63dabec5a37843f98
+import  -/  base-4.9.1.0:Data.Foldable 3e0b6967a1da89945d0e2d47266337a2
+import  -/  base-4.9.1.0:GHC.IO eb504c57b397cf133849f8586f15dafb
+import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
+import  -/  filepath-1.4.1.1@filepath-1.4.1.1:System.FilePath a3d1d13ac7dd86705b5dfaf58a5c0b9e
+import  -/  filepath-1.4.1.1@filepath-1.4.1.1:System.FilePath.Posix 6a5e3ee74184fdcc5da09a368e7c40f5
+import  -/  ghc-prim-0.5.0.0:GHC.Types 89f8de4f08018c9177c98d979eae0e45
+import  -/  graphviz-2999.18.1.2@graphviz-2999.18.1.2-I9dmpFhAddS1sgi4qbfiqU:Data.GraphViz 76a399f093d666110a040b8775faa860
+import  -/  graphviz-2999.18.1.2@graphviz-2999.18.1.2-I9dmpFhAddS1sgi4qbfiqU:Data.GraphViz.Commands 9269e0bdd4684b74da14a9e4aa6e7b9c
+import  -/  graphviz-2999.18.1.2@graphviz-2999.18.1.2-I9dmpFhAddS1sgi4qbfiqU:Data.GraphViz.Commands.Available 717f5dd1632965e561e508965788598f
+import  -/  graphviz-2999.18.1.2@graphviz-2999.18.1.2-I9dmpFhAddS1sgi4qbfiqU:Data.GraphViz.Types 31724d3a961e50d811ce524645499c77
+2b6ac535e58beb814a7f904340d2a446
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   WriteRunDot.$trModule2
+                   WriteRunDot.$trModule1) -}
+f086a654e08712401f29f07b7074ecb7
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "WriteRunDot"#) -}
+b3eed03b71dad44b0e4f52b78c035046
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "main"#) -}
+ffb853208f82a23b6beb3ea953a114fd
+  $wcreateImage ::
+    Data.GraphViz.Types.PrintDotRepr dg n =>
+    GHC.IO.FilePath -> dg n -> GHC.Types.IO GHC.IO.FilePath
+  {- Arity: 3,
+     Strictness: <L,U(A,U(A,C(C1(U(1*U,A))),A,A))><L,U><L,U>,
+     Inline: [0],
+     Unfolding: (\ @ (dg :: * -> *)
+                   @ n
+                   (w :: Data.GraphViz.Types.PrintDotRepr dg n)
+                   (ww :: GHC.IO.FilePath)
+                   (ww1 :: dg n) ->
+                 Data.GraphViz.Commands.addExtension
+                   @ (GHC.Types.IO GHC.IO.FilePath)
+                   (Data.GraphViz.Commands.runGraphvizCommand
+                      @ dg
+                      @ n
+                      w
+                      Data.GraphViz.Commands.Available.Dot
+                      ww1)
+                   Data.GraphViz.Commands.Png
+                   (System.FilePath.Posix.combine WriteRunDot.createImage1 ww)) -}
+08aa0f080a313d7a35a09789083f2f12
+  createImage ::
+    Data.GraphViz.Types.PrintDotRepr dg n =>
+    (GHC.IO.FilePath, dg n) -> GHC.Types.IO GHC.IO.FilePath
+  {- Arity: 2,
+     Strictness: <L,U(A,U(A,C(C1(U(1*U,A))),A,A))><S,1*U(U,U)>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ @ (dg :: * -> *)
+                   @ n
+                   (w :: Data.GraphViz.Types.PrintDotRepr dg n)
+                   (w1 :: (GHC.IO.FilePath, dg n)) ->
+                 case w1 of ww { (,) ww1 ww2 ->
+                 WriteRunDot.$wcreateImage @ dg @ n w ww1 ww2 }) -}
+a28916f0a51b62482b531765f46a658d
+  createImage1 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "/tmp"#) -}
+dad80b666026b472ad3172f46b344f3a
+  createImageInDir ::
+    Data.GraphViz.Types.PrintDotRepr dg n =>
+    GHC.IO.FilePath
+    -> GHC.IO.FilePath
+    -> Data.GraphViz.Commands.GraphvizOutput
+    -> dg n
+    -> GHC.Types.IO GHC.IO.FilePath
+  {- Arity: 5,
+     Strictness: <L,U(A,U(A,C(C1(U(1*U,A))),A,A))><L,1*U><L,U><L,U><L,U>,
+     Unfolding: InlineRule (5, True, False)
+                (\ @ (dg :: * -> *)
+                   @ n
+                   ($dPrintDotRepr :: Data.GraphViz.Types.PrintDotRepr dg n)
+                   (d :: GHC.IO.FilePath)
+                   (n1 :: GHC.IO.FilePath)
+                   (o :: Data.GraphViz.Commands.GraphvizOutput)
+                   (g :: dg n) ->
+                 Data.GraphViz.Commands.addExtension
+                   @ (GHC.Types.IO GHC.IO.FilePath)
+                   (Data.GraphViz.Commands.runGraphvizCommand
+                      @ dg
+                      @ n
+                      $dPrintDotRepr
+                      Data.GraphViz.Commands.Available.Dot
+                      g)
+                   o
+                   (System.FilePath.Posix.combine d n1)) -}
+75f01b76332af36de08addfed2096848
+  doDots ::
+    Data.GraphViz.Types.PrintDotRepr dg n =>
+    [(GHC.IO.FilePath, dg n)] -> GHC.Types.IO ()
+  {- Arity: 3,
+     Strictness: <L,U(A,U(A,C(C1(U(1*U,A))),A,A))><S,1*U><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                WriteRunDot.doDots1
+                  `cast`
+                (forall (dg :: <* -> *>_N) (n :: <*>_N).
+                 <Data.GraphViz.Types.PrintDotRepr dg n>_R
+                 ->_R <[(GHC.IO.FilePath, dg n)]>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+e9c967366cf819d2658c0312bfa41c9b
+  doDots1 ::
+    Data.GraphViz.Types.PrintDotRepr dg n =>
+    [(GHC.IO.FilePath, dg n)]
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 3,
+     Strictness: <L,U(A,U(A,C(C1(U(1*U,A))),A,A))><S,1*U><S,U>,
+     Unfolding: (\ @ (dg :: * -> *)
+                   @ n
+                   ($dPrintDotRepr :: Data.GraphViz.Types.PrintDotRepr dg n)
+                   (cases :: [(GHC.IO.FilePath, dg n)])
+                   (eta :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 letrec {
+                   go :: [(GHC.IO.FilePath, dg n)]
+                         -> GHC.Prim.State# GHC.Prim.RealWorld
+                         -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+                     {- Arity: 2, Strictness: <S,1*U><S,U> -}
+                   = \ (ds :: [(GHC.IO.FilePath, dg n)])
+                       (eta1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                     case ds of wild {
+                       [] -> (# eta1, GHC.Tuple.() #)
+                       : y ys
+                       -> case y of ww { (,) ww1 ww2 ->
+                          case (WriteRunDot.$wcreateImage @ dg @ n $dPrintDotRepr ww1 ww2)
+                                 `cast`
+                               (GHC.Types.N:IO[0] <GHC.IO.FilePath>_R)
+                                 eta1 of ds1 { (#,#) ipv ipv1 ->
+                          go ys ipv } } }
+                 } in
+                 go cases eta) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+

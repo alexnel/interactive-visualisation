@@ -28,6 +28,7 @@ executable interactive-visualisation
                        bytestring,
                        gloss == 1.10.2.5,
                        gloss-rendering  == 1.10.3.5,
-                       GLUT == 2.7.0.11
+                       GLUT == 2.7.0.11,
+                       split
   ghc-options:         -O2 -Wall
   other-modules:     WriteRunDot

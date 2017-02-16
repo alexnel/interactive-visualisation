@@ -1,0 +1,42 @@
+Configuring graphviz-2999.18.1.2...
+Building graphviz-2999.18.1.2...
+Preprocessing library graphviz-2999.18.1.2...
+[ 1 of 31] Compiling Data.GraphViz.Internal.Util ( Data/GraphViz/Internal/Util.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Data/GraphViz/Internal/Util.o )
+[ 2 of 31] Compiling Data.GraphViz.Exception ( Data/GraphViz/Exception.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Data/GraphViz/Exception.o )
+[ 3 of 31] Compiling Data.GraphViz.Attributes.ColorScheme ( Data/GraphViz/Attributes/ColorScheme.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Data/GraphViz/Attributes/ColorScheme.o )
+[ 4 of 31] Compiling Data.GraphViz.Internal.State ( Data/GraphViz/Internal/State.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Data/GraphViz/Internal/State.o )
+[ 5 of 31] Compiling Data.GraphViz.Parsing ( Data/GraphViz/Parsing.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Data/GraphViz/Parsing.o )
+[ 6 of 31] Compiling Data.GraphViz.PreProcessing ( Data/GraphViz/PreProcessing.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Data/GraphViz/PreProcessing.o )
+[ 7 of 31] Compiling Data.GraphViz.Printing ( Data/GraphViz/Printing.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Data/GraphViz/Printing.o )
+[ 8 of 31] Compiling Data.GraphViz.Attributes.Colors.Brewer ( Data/GraphViz/Attributes/Colors/Brewer.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Data/GraphViz/Attributes/Colors/Brewer.o )
+[ 9 of 31] Compiling Data.GraphViz.Attributes.Colors.SVG ( Data/GraphViz/Attributes/Colors/SVG.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Data/GraphViz/Attributes/Colors/SVG.o )
+[10 of 31] Compiling Data.GraphViz.Attributes.Colors.X11 ( Data/GraphViz/Attributes/Colors/X11.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Data/GraphViz/Attributes/Colors/X11.o )
+[11 of 31] Compiling Data.GraphViz.Attributes.Colors ( Data/GraphViz/Attributes/Colors.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Data/GraphViz/Attributes/Colors.o )
+[12 of 31] Compiling Data.GraphViz.Attributes.Internal ( Data/GraphViz/Attributes/Internal.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Data/GraphViz/Attributes/Internal.o )
+[13 of 31] Compiling Data.GraphViz.Attributes.HTML ( Data/GraphViz/Attributes/HTML.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Data/GraphViz/Attributes/HTML.o )
+[14 of 31] Compiling Data.GraphViz.Attributes.Values ( Data/GraphViz/Attributes/Values.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Data/GraphViz/Attributes/Values.o )
+[15 of 31] Compiling Data.GraphViz.Commands.Available ( Data/GraphViz/Commands/Available.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Data/GraphViz/Commands/Available.o )
+[16 of 31] Compiling Data.GraphViz.Attributes.Arrows ( Data/GraphViz/Attributes/Arrows.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Data/GraphViz/Attributes/Arrows.o )
+[17 of 31] Compiling Data.GraphViz.Attributes.Complete ( Data/GraphViz/Attributes/Complete.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Data/GraphViz/Attributes/Complete.o )
+
+Data/GraphViz/Attributes/Complete.hs:1013:1: warning:
+    Pattern match checker exceeded (2000000) iterations in
+    an equation for ‘sameAttribute’. (Use -fmax-pmcheck-iterations=n
+    to set the maximun number of iterations to n)
+[18 of 31] Compiling Data.GraphViz.Attributes.Same ( Data/GraphViz/Attributes/Same.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Data/GraphViz/Attributes/Same.o )
+[19 of 31] Compiling Data.GraphViz.Types.Internal.Common ( Data/GraphViz/Types/Internal/Common.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Data/GraphViz/Types/Internal/Common.o )
+[20 of 31] Compiling Data.GraphViz.Types.Canonical ( Data/GraphViz/Types/Canonical.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Data/GraphViz/Types/Canonical.o )
+[21 of 31] Compiling Data.GraphViz.Types.State ( Data/GraphViz/Types/State.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Data/GraphViz/Types/State.o )
+[22 of 31] Compiling Data.GraphViz.Types ( Data/GraphViz/Types.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Data/GraphViz/Types.o )
+[23 of 31] Compiling Data.GraphViz.Commands.IO ( Data/GraphViz/Commands/IO.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Data/GraphViz/Commands/IO.o )
+[24 of 31] Compiling Data.GraphViz.Commands ( Data/GraphViz/Commands.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Data/GraphViz/Commands.o )
+[25 of 31] Compiling Data.GraphViz.Attributes ( Data/GraphViz/Attributes.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Data/GraphViz/Attributes.o )
+[26 of 31] Compiling Data.GraphViz.Algorithms.Clustering ( Data/GraphViz/Algorithms/Clustering.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Data/GraphViz/Algorithms/Clustering.o )
+[27 of 31] Compiling Data.GraphViz.Algorithms ( Data/GraphViz/Algorithms.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Data/GraphViz/Algorithms.o )
+[28 of 31] Compiling Data.GraphViz.Types.Generalised ( Data/GraphViz/Types/Generalised.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Data/GraphViz/Types/Generalised.o )
+[29 of 31] Compiling Data.GraphViz.Types.Monadic ( Data/GraphViz/Types/Monadic.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Data/GraphViz/Types/Monadic.o )
+[30 of 31] Compiling Data.GraphViz.Types.Graph ( Data/GraphViz/Types/Graph.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Data/GraphViz/Types/Graph.o )
+[31 of 31] Compiling Data.GraphViz    ( Data/GraphViz.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Data/GraphViz.o )
+Installing library in
+/home/alexandra/.stack/snapshots/x86_64-linux/lts-8.0/8.0.2/lib/x86_64-linux-ghc-8.0.2/graphviz-2999.18.1.2-I9dmpFhAddS1sgi4qbfiqU
+Registering graphviz-2999.18.1.2...

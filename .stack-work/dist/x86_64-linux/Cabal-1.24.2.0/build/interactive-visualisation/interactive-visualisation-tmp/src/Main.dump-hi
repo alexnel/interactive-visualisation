@@ -1,0 +1,1516 @@
+
+==================== FINAL INTERFACE ====================
+2017-02-16 14:04:18.377012 UTC
+
+interface main@main:Main 8002
+  interface hash: 80a3792facbd551edc176c3f1a19ca17
+  ABI hash: 71256b83b21babc2f0d7ba8a4d039d82
+  export-list hash: 3c4a00366a797a20e8e55e8adb0810e7
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: b533e7adde66da5d2091fc5c81d79cc3
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Main.addConnection
+  Main.addNode
+  Main.bool
+  Main.charCallback
+  Main.cursorPosCallback
+  Main.displayPic
+  Main.errorCallback
+  Main.getAB
+  Main.gnomeParams
+  Main.gnomes
+  Main.hGetContentsStrict
+  Main.hei
+  Main.initialiseFile
+  Main.keyCallback
+  Main.main
+  Main.mainLoop
+  Main.maybe'
+  Main.mouseButtonCallback
+  Main.readFileStrict
+  Main.readfile
+  Main.save
+  Main.store
+  Main.unless'
+  Main.wid
+module dependencies: WriteRunDot
+package dependencies: GLFW-b-1.4.8.1@GLFW-b-1.4.8.1-1V1u4vvq5bWIFWVhVPjY4A
+                      GLURaw-2.0.0.3@GLURaw-2.0.0.3-G12M6COyQIU5WfRlrIwPuj
+                      GLUT-2.7.0.11@GLUT-2.7.0.11-IP0PzJz4wI8KYXyKTnttpl
+                      JuicyPixels-3.2.8@JuicyPixels-3.2.8-JQG2D4nVzpU8XevZTzbbIE
+                      ObjectName-1.1.0.1@ObjectName-1.1.0.1-EiFOWjUQWWuLyOhtrmuIWX
+                      OpenGL-3.0.1.0@OpenGL-3.0.1.0-BckrJgI63aX3I0VRJxU6fY
+                      OpenGLRaw-3.2.4.0@OpenGLRaw-3.2.4.0-JDyGgOXR61GG549SwmWm2Q
+                      StateVar-1.1.0.4@StateVar-1.1.0.4-5dJbnTVECtEAhfJXPZKdbO
+                      array-0.5.1.1@array-0.5.1.1 base-4.9.1.0
+                      base-compat-0.9.1@base-compat-0.9.1-B9geVZFtCvE8ERS7UcvkRz
+                      binary-0.8.3.0@binary-0.8.3.0
+                      bindings-GLFW-3.1.2.2@bindings-GLFW-3.1.2.2-8A8NDyit2GUAksQpR7G7mj
+                      bmp-1.2.6.3@bmp-1.2.6.3-43OLkH0uuwm831pBFpx2PZ
+                      bytestring-0.10.8.1@bytestring-0.10.8.1
+                      colour-2.3.3@colour-2.3.3-7zspnmhVLMd3uThUzy60rY
+                      containers-0.5.7.1@containers-0.5.7.1
+                      deepseq-1.4.2.0@deepseq-1.4.2.0 directory-1.3.0.0@directory-1.3.0.0
+                      dlist-0.8.0.2@dlist-0.8.0.2-6Wnps4GD7EFnRucVzXIFD
+                      exceptions-0.8.3@exceptions-0.8.3-ADEDRATtUrMK1JW4zMQ9U
+                      fgl-5.5.3.0@fgl-5.5.3.0-2sNS3Wnitgh1EFrdBQMbFh
+                      filepath-1.4.1.1@filepath-1.4.1.1
+                      fixed-0.2.1.1@fixed-0.2.1.1-8Jr82l0kss5Gr4nEevmXlZ
+                      ghc-boot-th-8.0.2@ghc-boot-th-8.0.2 ghc-prim-0.5.0.0
+                      gloss-1.10.2.5@gloss-1.10.2.5-Cjq2LIsB60XBDXiLGr6ISz
+                      gloss-juicy-0.2.2@gloss-juicy-0.2.2-KJBjZkZxx1lENj8OGK4Ifn
+                      gloss-rendering-1.10.3.5@gloss-rendering-1.10.3.5-4njwxhM0L51DDTj3f5QCty
+                      graphviz-2999.18.1.2@graphviz-2999.18.1.2-I9dmpFhAddS1sgi4qbfiqU
+                      half-0.2.2.3@half-0.2.2.3-GHJ372Ls7FBA3PAGtGHfOR
+                      integer-gmp-1.0.0.1 mtl-2.2.1@mtl-2.2.1-BLKBelFsPB3BoFeSWSOYj6
+                      polyparse-1.12@polyparse-1.12-Ee2dhxWFCj0JUfsZIQidEE
+                      primitive-0.6.1.0@primitive-0.6.1.0-6AbSTw9JXz141LE5p6LGH
+                      process-1.4.3.0@process-1.4.3.0
+                      split-0.2.3.1@split-0.2.3.1-FWyXC6nhV0H3AfM8IzrEFk
+                      stm-2.4.4.1@stm-2.4.4.1-JQn4hNPyYjP5m9AcbI88Ve
+                      template-haskell-2.11.1.0
+                      temporary-1.2.0.4@temporary-1.2.0.4-IIsg6ZMPNLX2bbJdNFhbfn
+                      text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR
+                      time-1.6.0.1@time-1.6.0.1 transformers-0.5.2.0@transformers-0.5.2.0
+                      unix-2.7.2.1@unix-2.7.2.1
+                      vector-0.11.0.0@vector-0.11.0.0-LMwQhhnXj8U3T5Bm1JFxG
+                      wl-pprint-text-1.1.1.0@wl-pprint-text-1.1.1.0-CFL1vWpEhp9Dz8zEyP0Jvc
+                      zlib-0.6.1.2@zlib-0.6.1.2-7negTfm2ujt1gW4wr40MUp
+orphans: GLFW-b-1.4.8.1@GLFW-b-1.4.8.1-1V1u4vvq5bWIFWVhVPjY4A:Graphics.UI.GLFW.Types
+         base-4.9.1.0:GHC.Base base-4.9.1.0:GHC.Float
+         binary-0.8.3.0@binary-0.8.3.0:Data.Binary.Generic
+         bytestring-0.10.8.1@bytestring-0.10.8.1:Data.ByteString.Builder
+         colour-2.3.3@colour-2.3.3-7zspnmhVLMd3uThUzy60rY:Data.Colour
+         gloss-rendering-1.10.3.5@gloss-rendering-1.10.3.5-4njwxhM0L51DDTj3f5QCty:Graphics.Gloss.Internals.Data.Picture
+         graphviz-2999.18.1.2@graphviz-2999.18.1.2-I9dmpFhAddS1sgi4qbfiqU:Data.GraphViz.Printing
+         stm-2.4.4.1@stm-2.4.4.1-JQn4hNPyYjP5m9AcbI88Ve:Control.Monad.STM
+         text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text
+         text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text.Lazy
+         text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text.Show
+         time-1.6.0.1@time-1.6.0.1:Data.Time.Calendar.Gregorian
+         time-1.6.0.1@time-1.6.0.1:Data.Time.Format.Parse
+         time-1.6.0.1@time-1.6.0.1:Data.Time.LocalTime.LocalTime
+         transformers-0.5.2.0@transformers-0.5.2.0:Control.Monad.Trans.Error
+         vector-0.11.0.0@vector-0.11.0.0-LMwQhhnXj8U3T5Bm1JFxG:Data.Vector.Fusion.Bundle
+         vector-0.11.0.0@vector-0.11.0.0-LMwQhhnXj8U3T5Bm1JFxG:Data.Vector.Unboxed
+         wl-pprint-text-1.1.1.0@wl-pprint-text-1.1.1.0-CFL1vWpEhp9Dz8zEyP0Jvc:Text.PrettyPrint.Leijen.Text.Monadic
+family instance modules: GLFW-b-1.4.8.1@GLFW-b-1.4.8.1-1V1u4vvq5bWIFWVhVPjY4A:Graphics.UI.GLFW.Types
+                         JuicyPixels-3.2.8@JuicyPixels-3.2.8-JQG2D4nVzpU8XevZTzbbIE:Codec.Picture.Tga
+                         JuicyPixels-3.2.8@JuicyPixels-3.2.8-JQG2D4nVzpU8XevZTzbbIE:Codec.Picture.Tiff
+                         JuicyPixels-3.2.8@JuicyPixels-3.2.8-JQG2D4nVzpU8XevZTzbbIE:Codec.Picture.Types
+                         base-4.9.1.0:Control.Applicative base-4.9.1.0:Data.Complex
+                         base-4.9.1.0:Data.Either base-4.9.1.0:Data.Functor.Const
+                         base-4.9.1.0:Data.Functor.Identity base-4.9.1.0:Data.List.NonEmpty
+                         base-4.9.1.0:Data.Monoid base-4.9.1.0:Data.Semigroup
+                         base-4.9.1.0:Data.Type.Equality base-4.9.1.0:Data.Version
+                         base-4.9.1.0:Data.Void base-4.9.1.0:GHC.Exts
+                         base-4.9.1.0:GHC.Generics base-4.9.1.0:GHC.IO.Exception
+                         base-4.9.1.0:GHC.TypeLits
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntMap.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntSet.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Map.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Sequence
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Set.Base
+                         dlist-0.8.0.2@dlist-0.8.0.2-6Wnps4GD7EFnRucVzXIFD:Data.DList
+                         fgl-5.5.3.0@fgl-5.5.3.0-2sNS3Wnitgh1EFrdBQMbFh:Data.Graph.Inductive.PatriciaTree
+                         ghc-boot-th-8.0.2@ghc-boot-th-8.0.2:GHC.LanguageExtensions.Type
+                         primitive-0.6.1.0@primitive-0.6.1.0-6AbSTw9JXz141LE5p6LGH:Control.Monad.Primitive
+                         template-haskell-2.11.1.0:Language.Haskell.TH.Syntax
+                         text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text
+                         text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text.Lazy
+                         vector-0.11.0.0@vector-0.11.0.0-LMwQhhnXj8U3T5Bm1JFxG:Data.Vector
+                         vector-0.11.0.0@vector-0.11.0.0-LMwQhhnXj8U3T5Bm1JFxG:Data.Vector.Primitive
+                         vector-0.11.0.0@vector-0.11.0.0-LMwQhhnXj8U3T5Bm1JFxG:Data.Vector.Storable
+                         vector-0.11.0.0@vector-0.11.0.0-LMwQhhnXj8U3T5Bm1JFxG:Data.Vector.Unboxed
+                         vector-0.11.0.0@vector-0.11.0.0-LMwQhhnXj8U3T5Bm1JFxG:Data.Vector.Unboxed.Base
+                         zlib-0.6.1.2@zlib-0.6.1.2-7negTfm2ujt1gW4wr40MUp:Codec.Compression.Zlib.Stream
+import  -/  GLFW-b-1.4.8.1@GLFW-b-1.4.8.1-1V1u4vvq5bWIFWVhVPjY4A:Graphics.UI.GLFW d0371771572b9395a84f189feeafa0c6
+import  -/  GLFW-b-1.4.8.1@GLFW-b-1.4.8.1-1V1u4vvq5bWIFWVhVPjY4A:Graphics.UI.GLFW.Types 12db1661b1a52055aac40e676815c65c
+import  -/  GLUT-2.7.0.11@GLUT-2.7.0.11-IP0PzJz4wI8KYXyKTnttpl:Graphics.UI.GLUT 850ab735296960c40e0ec36d1d65a5d9
+import  -/  GLUT-2.7.0.11@GLUT-2.7.0.11-IP0PzJz4wI8KYXyKTnttpl:Graphics.UI.GLUT.Initialization 6f5c3e11cdffd203f733838209805df8
+import  -/  OpenGL-3.0.1.0@OpenGL-3.0.1.0-BckrJgI63aX3I0VRJxU6fY:Graphics.Rendering.OpenGL b5ddc4fe49b1c4d19da6c57344626f44
+import  -/  OpenGL-3.0.1.0@OpenGL-3.0.1.0-BckrJgI63aX3I0VRJxU6fY:Graphics.Rendering.OpenGL.GL.CoordTrans 75f4b70189073bad57f60e018a98f091
+import  -/  StateVar-1.1.0.4@StateVar-1.1.0.4-5dJbnTVECtEAhfJXPZKdbO:Data.StateVar 54a09cc28cf7d6ddcbd881e9786d7bbd
+import  -/  base-4.9.1.0:Control.Concurrent 2ee6a0a58489520b9a96d8fef10380fa
+import  -/  base-4.9.1.0:Control.Monad a6784c5dab0d75c63dabec5a37843f98
+import  -/  base-4.9.1.0:Data.Foldable 3e0b6967a1da89945d0e2d47266337a2
+import  -/  base-4.9.1.0:Data.List 07ae2acca6538aa0800bd0a993ac6ac1
+import  -/  base-4.9.1.0:Data.Maybe d876c4ffe4b3c43755a781e8ad860d88
+import  -/  base-4.9.1.0:Data.OldList 27987919d8da2f92e3f472ca81f730f8
+import  -/  base-4.9.1.0:GHC.Base c4231c43c07e46080a26bf94094c7aa1
+import  -/  base-4.9.1.0:GHC.Err 3bba35a16538d33d424682ce66876cdd
+import  -/  base-4.9.1.0:GHC.IO eb504c57b397cf133849f8586f15dafb
+import  -/  base-4.9.1.0:GHC.IO.Handle ba98a5b34d78cbf48b41fe58a3735c69
+import  -/  base-4.9.1.0:GHC.IO.Handle.FD dbf0d0d4f42ab1465129a88ccf7880ff
+import  -/  base-4.9.1.0:GHC.IO.Handle.Text b65719f3b262b071ab1aabeb72fc9d8b
+import  -/  base-4.9.1.0:GHC.IO.Handle.Types 17aa0e2ab137800e3a31992d780c071f
+import  -/  base-4.9.1.0:GHC.IO.IOMode 2f5782f93b12a0d860d6d661b9fb405c
+import  -/  base-4.9.1.0:GHC.List ab8c4e523e6c479c549d3bcd5fc4a439
+import  -/  base-4.9.1.0:GHC.Num 00bfaa7b2f9d6084913c0697a8a49ec8
+import  -/  base-4.9.1.0:GHC.Real 82e4e59051a13dba1da63e1e970a69e6
+import  -/  base-4.9.1.0:GHC.Show a027f5ac24879eaba752f44aa90fe511
+import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
+import  -/  base-4.9.1.0:System.Exit 068ba078eb20417d7af66db8b8ab4db1
+import  -/  base-4.9.1.0:System.IO e4a64a8e3dce8616da54f0ee7104f7db
+import  -/  base-4.9.1.0:Text.Read 75c59863e882ebaec4532e9465e2ee9b
+import  -/  fgl-5.5.3.0@fgl-5.5.3.0-2sNS3Wnitgh1EFrdBQMbFh:Data.Graph.Inductive d679919fab6e8fb4ba4cc627a695dea5
+import  -/  fgl-5.5.3.0@fgl-5.5.3.0-2sNS3Wnitgh1EFrdBQMbFh:Data.Graph.Inductive.Graph 39d6dd1cbe59822e66a503c10edfdc20
+import  -/  fgl-5.5.3.0@fgl-5.5.3.0-2sNS3Wnitgh1EFrdBQMbFh:Data.Graph.Inductive.PatriciaTree 10bf67ebd335c01d17f7e31f4d78c382
+import  -/  ghc-prim-0.5.0.0:GHC.Classes 0bdf3d057a415ec1b84a7b1994efbe47
+import  -/  ghc-prim-0.5.0.0:GHC.Types 89f8de4f08018c9177c98d979eae0e45
+import  -/  gloss-1.10.2.5@gloss-1.10.2.5-Cjq2LIsB60XBDXiLGr6ISz:Graphics.Gloss 446fba84c72c2162e0e53dbea5b10a12
+import  -/  gloss-1.10.2.5@gloss-1.10.2.5-Cjq2LIsB60XBDXiLGr6ISz:Graphics.Gloss.Data.Color 35f09dcf5824a501e40cfcf03326b2bc
+import  -/  gloss-1.10.2.5@gloss-1.10.2.5-Cjq2LIsB60XBDXiLGr6ISz:Graphics.Gloss.Data.Picture 32f91608a8bdee9c0064dc93458da74d
+import  -/  gloss-juicy-0.2.2@gloss-juicy-0.2.2-KJBjZkZxx1lENj8OGK4Ifn:Graphics.Gloss.Juicy 6e3c1c1e5c164b0c8194dce5aff7b5ef
+import  -/  gloss-rendering-1.10.3.5@gloss-rendering-1.10.3.5-4njwxhM0L51DDTj3f5QCty:Graphics.Gloss.Internals.Data.Picture ec8d0a362f39091fe9e13deed4330688
+import  -/  gloss-rendering-1.10.3.5@gloss-rendering-1.10.3.5-4njwxhM0L51DDTj3f5QCty:Graphics.Gloss.Internals.Rendering.State e78dda8c29c945455f0c17e99e8967d0
+import  -/  gloss-rendering-1.10.3.5@gloss-rendering-1.10.3.5-4njwxhM0L51DDTj3f5QCty:Graphics.Gloss.Rendering eba68b1c22bcea02da17bedd7dce6f0f
+import  -/  graphviz-2999.18.1.2@graphviz-2999.18.1.2-I9dmpFhAddS1sgi4qbfiqU:Data.GraphViz 76a399f093d666110a040b8775faa860
+import  -/  graphviz-2999.18.1.2@graphviz-2999.18.1.2-I9dmpFhAddS1sgi4qbfiqU:Data.GraphViz.Attributes.Colors aa7e2b9655bf11b90f951feb7aca48bd
+import  -/  graphviz-2999.18.1.2@graphviz-2999.18.1.2-I9dmpFhAddS1sgi4qbfiqU:Data.GraphViz.Attributes.Colors.X11 8d58639085a87691ac0606c1604b70f2
+import  -/  graphviz-2999.18.1.2@graphviz-2999.18.1.2-I9dmpFhAddS1sgi4qbfiqU:Data.GraphViz.Attributes.Complete 780a4f281a8cdf0945ccc978317909e3
+import  -/  graphviz-2999.18.1.2@graphviz-2999.18.1.2-I9dmpFhAddS1sgi4qbfiqU:Data.GraphViz.Attributes.Values 5bc42c01f1bde0903e4438e57e7ae530
+import  -/  graphviz-2999.18.1.2@graphviz-2999.18.1.2-I9dmpFhAddS1sgi4qbfiqU:Data.GraphViz.Printing a9b135674d96f45b7a3d9c3c6d39e8c2
+import  -/  graphviz-2999.18.1.2@graphviz-2999.18.1.2-I9dmpFhAddS1sgi4qbfiqU:Data.GraphViz.Types.Internal.Common eb1795606269bec6d673d231ff4453fc
+import  -/  WriteRunDot cd7e7ea4389bc13a88c37e595ce14f59
+  exports: 8b8cb919117316c02e392a40a10d879d
+  doDots 75f01b76332af36de08addfed2096848
+import  -/  split-0.2.3.1@split-0.2.3.1-FWyXC6nhV0H3AfM8IzrEFk:Data.List.Split c60198a427bfd51d9fb4562c059ec1d2
+import  -/  split-0.2.3.1@split-0.2.3.1-FWyXC6nhV0H3AfM8IzrEFk:Data.List.Split.Internals 25dced234ed01c9c803d678763a4d772
+import  -/  text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text.Internal.Lazy 8ddf02d1ef356cd2803f8fcb574f04aa
+import  -/  text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text.Lazy 4a40d71400d65c5e5388b19a6efe364e
+d6831ef04cb9301b090dfae6f7bb7ec7
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module Main.$trModule2 Main.$trModule1) -}
+847d9fc3b8e6f0b424199f36b4999bb2
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Main"#) -}
+24ef6042833e75ffd7aa98b83ecca98d
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "main"#) -}
+d6d0d91fce32faa93489d45bb74dde0a
+  $wcursorPosCallback ::
+    GHC.Prim.Double#
+    -> GHC.Prim.Double#
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 3, Strictness: <S,U><S,U><S,U>, Inline: [0],
+     Unfolding: (\ (ww :: GHC.Prim.Double#)
+                   (ww1 :: GHC.Prim.Double#)
+                   (w :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.>## ww ww1) of wild {
+                   GHC.Types.False
+                   -> GHC.IO.Handle.Text.hPutStr2
+                        GHC.IO.Handle.FD.stdout
+                        (GHC.Float.$w$sshowSignedFloat
+                           GHC.Float.$fShowDouble_$sshowFloat
+                           GHC.Show.shows22
+                           ww1
+                           (GHC.Types.[] @ GHC.Types.Char))
+                        GHC.Types.True
+                        w
+                   GHC.Types.True
+                   -> GHC.IO.Handle.Text.hPutStr2
+                        GHC.IO.Handle.FD.stdout
+                        (GHC.Float.$w$sshowSignedFloat
+                           GHC.Float.$fShowDouble_$sshowFloat
+                           GHC.Show.shows22
+                           ww
+                           (GHC.Types.[] @ GHC.Types.Char))
+                        GHC.Types.True
+                        w }) -}
+7cb35d4c139a93c0def6f6edee5478c9
+  $wkeyCallback ::
+    Graphics.UI.GLFW.Types.Window
+    -> Graphics.UI.GLFW.Types.Key
+    -> Graphics.UI.GLFW.Types.KeyState
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 4, Strictness: <L,1*U(U)><S,1*U><L,U><S,U>, Inline: [0],
+     Unfolding: (\ (w :: Graphics.UI.GLFW.Types.Window)
+                   (w1 :: Graphics.UI.GLFW.Types.Key)
+                   (w2 :: Graphics.UI.GLFW.Types.KeyState)
+                   (w3 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 let {
+                   $j :: GHC.Prim.Void#
+                         -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+                     {- Arity: 1, Strictness: <L,A> -}
+                   = \ (w4 :: GHC.Prim.Void#)[OneShot] ->
+                     case GHC.Prim.dataToTag# @ Graphics.UI.GLFW.Types.Key w1 of wild {
+                       DEFAULT
+                       -> case w `cast`
+                               (Graphics.UI.GLFW.Types.N:Window[0]) of ww { GHC.Ptr.Ptr ww1 ->
+                          case {__pkg_ccall_GC bindings-GLFW-3.1.2.2@bindings-GLFW-3.1.2.2-8A8NDyit2GUAksQpR7G7mj glfwSetWindowShouldClose GHC.Prim.Addr#
+                                                                                                                                           -> GHC.Prim.Int#
+                                                                                                                                           -> GHC.Prim.State#
+                                                                                                                                                GHC.Prim.RealWorld
+                                                                                                                                           -> (# GHC.Prim.State#
+                                                                                                                                                   GHC.Prim.RealWorld #)}
+                                 ww1
+                                 0#
+                                 w3 of wild1 { Unit# ds6 ->
+                          (# ds6, GHC.Tuple.() #) } }
+                       1#
+                       -> case w2 of wild1 {
+                            Graphics.UI.GLFW.Types.KeyState'Pressed
+                            -> GHC.IO.Handle.Text.hPutStr2
+                                 GHC.IO.Handle.FD.stdout
+                                 Main.keyCallback2
+                                 GHC.Types.True
+                                 w3
+                            Graphics.UI.GLFW.Types.KeyState'Released
+                            -> case w `cast`
+                                    (Graphics.UI.GLFW.Types.N:Window[0]) of ww { GHC.Ptr.Ptr ww1 ->
+                               case {__pkg_ccall_GC bindings-GLFW-3.1.2.2@bindings-GLFW-3.1.2.2-8A8NDyit2GUAksQpR7G7mj glfwSetWindowShouldClose GHC.Prim.Addr#
+                                                                                                                                                -> GHC.Prim.Int#
+                                                                                                                                                -> GHC.Prim.State#
+                                                                                                                                                     GHC.Prim.RealWorld
+                                                                                                                                                -> (# GHC.Prim.State#
+                                                                                                                                                        GHC.Prim.RealWorld #)}
+                                      ww1
+                                      0#
+                                      w3 of wild2 { Unit# ds6 ->
+                               (# ds6, GHC.Tuple.() #) } }
+                            Graphics.UI.GLFW.Types.KeyState'Repeating
+                            -> case w `cast`
+                                    (Graphics.UI.GLFW.Types.N:Window[0]) of ww { GHC.Ptr.Ptr ww1 ->
+                               case {__pkg_ccall_GC bindings-GLFW-3.1.2.2@bindings-GLFW-3.1.2.2-8A8NDyit2GUAksQpR7G7mj glfwSetWindowShouldClose GHC.Prim.Addr#
+                                                                                                                                                -> GHC.Prim.Int#
+                                                                                                                                                -> GHC.Prim.State#
+                                                                                                                                                     GHC.Prim.RealWorld
+                                                                                                                                                -> (# GHC.Prim.State#
+                                                                                                                                                        GHC.Prim.RealWorld #)}
+                                      ww1
+                                      0#
+                                      w3 of wild2 { Unit# ds6 ->
+                               (# ds6, GHC.Tuple.() #) } } } }
+                 } in
+                 case GHC.Prim.dataToTag# @ Graphics.UI.GLFW.Types.Key w1 of wild {
+                   DEFAULT -> $j GHC.Prim.void#
+                   51#
+                   -> case w2 of wild1 {
+                        Graphics.UI.GLFW.Types.KeyState'Pressed
+                        -> case w `cast`
+                                (Graphics.UI.GLFW.Types.N:Window[0]) of ww { GHC.Ptr.Ptr ww1 ->
+                           case {__pkg_ccall_GC bindings-GLFW-3.1.2.2@bindings-GLFW-3.1.2.2-8A8NDyit2GUAksQpR7G7mj glfwSetWindowShouldClose GHC.Prim.Addr#
+                                                                                                                                            -> GHC.Prim.Int#
+                                                                                                                                            -> GHC.Prim.State#
+                                                                                                                                                 GHC.Prim.RealWorld
+                                                                                                                                            -> (# GHC.Prim.State#
+                                                                                                                                                    GHC.Prim.RealWorld #)}
+                                  ww1
+                                  1#
+                                  w3 of wild2 { Unit# ds6 ->
+                           (# ds6, GHC.Tuple.() #) } }
+                        Graphics.UI.GLFW.Types.KeyState'Released -> $j GHC.Prim.void#
+                        Graphics.UI.GLFW.Types.KeyState'Repeating
+                        -> $j GHC.Prim.void# } }) -}
+d533e2df3707380edd1ea909e09cc371
+  $wmainLoop ::
+    GHC.Prim.Addr#
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 2, Strictness: <S,U><S,U>, Inline: [0] -}
+e4d2a284c81b151cd46af4e14257fca5
+  $wmouseButtonCallback ::
+    Graphics.UI.GLFW.Types.MouseButton
+    -> Graphics.UI.GLFW.Types.MouseButtonState
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 3, Strictness: <S,U><L,U><S,U>, Inline: [0],
+     Unfolding: (\ (w :: Graphics.UI.GLFW.Types.MouseButton)
+                   (w1 :: Graphics.UI.GLFW.Types.MouseButtonState)
+                   (w2 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 let {
+                   $w$j :: GHC.Prim.State# GHC.Prim.RealWorld
+                           -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+                     {- Arity: 1, Strictness: <S,U>, Inline: [0] -}
+                   = \ (w3 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                     case w of wild {
+                       Graphics.UI.GLFW.Types.MouseButton'1
+                       -> case w1 of wild1 {
+                            Graphics.UI.GLFW.Types.MouseButtonState'Pressed -> Main.main7 w3
+                            Graphics.UI.GLFW.Types.MouseButtonState'Released
+                            -> GHC.IO.Handle.Text.hPutStr2
+                                 GHC.IO.Handle.FD.stdout
+                                 Main.main6
+                                 GHC.Types.True
+                                 w3 }
+                       Graphics.UI.GLFW.Types.MouseButton'2 -> Main.main7 w3
+                       Graphics.UI.GLFW.Types.MouseButton'3 -> Main.main7 w3
+                       Graphics.UI.GLFW.Types.MouseButton'4 -> Main.main7 w3
+                       Graphics.UI.GLFW.Types.MouseButton'5 -> Main.main7 w3
+                       Graphics.UI.GLFW.Types.MouseButton'6 -> Main.main7 w3
+                       Graphics.UI.GLFW.Types.MouseButton'7 -> Main.main7 w3
+                       Graphics.UI.GLFW.Types.MouseButton'8 -> Main.main7 w3 }
+                 } in
+                 case w of wild {
+                   Graphics.UI.GLFW.Types.MouseButton'1
+                   -> case w1 of wild1 {
+                        Graphics.UI.GLFW.Types.MouseButtonState'Pressed
+                        -> GHC.IO.Handle.Text.hPutStr2
+                             GHC.IO.Handle.FD.stdout
+                             Main.main5
+                             GHC.Types.True
+                             w2
+                        Graphics.UI.GLFW.Types.MouseButtonState'Released -> $w$j w2 }
+                   Graphics.UI.GLFW.Types.MouseButton'2 -> $w$j w2
+                   Graphics.UI.GLFW.Types.MouseButton'3 -> $w$j w2
+                   Graphics.UI.GLFW.Types.MouseButton'4 -> $w$j w2
+                   Graphics.UI.GLFW.Types.MouseButton'5 -> $w$j w2
+                   Graphics.UI.GLFW.Types.MouseButton'6 -> $w$j w2
+                   Graphics.UI.GLFW.Types.MouseButton'7 -> $w$j w2
+                   Graphics.UI.GLFW.Types.MouseButton'8 -> $w$j w2 }) -}
+9013d7cdd5ce1ec63b7a1a097473cbd0
+  addConnection ::
+    [GHC.Types.Char] -> [GHC.Types.Char] -> GHC.Types.IO ()
+  {- Arity: 3, Strictness: <L,1*U><L,1*U><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.addConnection1
+                  `cast`
+                (<[GHC.Types.Char]>_R
+                 ->_R <[GHC.Types.Char]>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+49dcc6abdad35fbcf086bab6a74e4eee
+  addConnection1 ::
+    [GHC.Types.Char]
+    -> [GHC.Types.Char]
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 3, Strictness: <L,1*U><L,1*U><S,U>,
+     Unfolding: (\ (name1 :: [GHC.Types.Char])
+                   (name2 :: [GHC.Types.Char])
+                   (eta :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 System.IO.appendFile1
+                   Main.addConnection3
+                   (GHC.Base.++
+                      @ GHC.Types.Char
+                      name1
+                      (GHC.CString.unpackAppendCString#
+                         " "#
+                         (GHC.Base.++ @ GHC.Types.Char name2 Main.addConnection2)))
+                   eta) -}
+8c54c0529a6a26d158703e8526229319
+  addConnection2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "\n"#) -}
+8438a86a502c01889f93d81c63d0a77f
+  addConnection3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "pos.txt"#) -}
+accbb622844c0dcc7dad2f4fe6bcf821
+  addNode ::
+    [GHC.Types.Char]
+    -> GHC.Base.String -> GHC.Base.String -> GHC.Types.IO ()
+  {- Arity: 4, Strictness: <L,1*U><L,U><L,U><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.addNode1
+                  `cast`
+                (<[GHC.Types.Char]>_R
+                 ->_R <GHC.Base.String>_R
+                 ->_R <GHC.Base.String>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+4a9fb4e31fe4313f55b62686c2f475af
+  addNode1 ::
+    [GHC.Types.Char]
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 4, Strictness: <L,1*U><L,U><L,U><S,U> -}
+13ed866c5d97af2e765825099cc62a6d
+  bool :: GHC.Types.Bool -> a -> a -> a
+  {- Arity: 3, HasNoCafRefs, Strictness: <S,1*U><L,1*U><L,1*U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a (b :: GHC.Types.Bool) (falseRes :: a) (trueRes :: a) ->
+                 case b of wild {
+                   GHC.Types.False -> falseRes GHC.Types.True -> trueRes }) -}
+7385d63f77f3c919a1d2c22710c2a9c0
+  charCallback :: Graphics.UI.GLFW.CharCallback
+  {- Arity: 3, Strictness: <L,A><S(S),1*U(U)><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.charCallback1
+                  `cast`
+                (<Graphics.UI.GLFW.Types.Window>_R
+                 ->_R <GHC.Types.Char>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+f1ba1b123346a4d64f4a6faa9a83a92b
+  charCallback1 ::
+    Graphics.UI.GLFW.Types.Window
+    -> GHC.Types.Char
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 3, Strictness: <L,A><S(S),1*U(U)><S,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ (window :: Graphics.UI.GLFW.Types.Window)
+                   (codepoint :: GHC.Types.Char)
+                   (eta :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case codepoint of ww { GHC.Types.C# ww1 ->
+                 case GHC.IO.Handle.Text.$whPutChar
+                        GHC.IO.Handle.FD.stdout
+                        ww1
+                        eta of ds1 { (#,#) ipv ipv1 ->
+                 GHC.IO.Handle.Text.hPutStr2
+                   GHC.IO.Handle.FD.stdout
+                   Main.addConnection2
+                   GHC.Types.False
+                   ipv } }) -}
+351fb0bf2fbf5c53a8e18158d7cb9d50
+  cursorPosCallback :: Graphics.UI.GLFW.CursorPosCallback
+  {- Arity: 4, Strictness: <L,A><S(S),1*U(U)><S(S),1*U(U)><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.cursorPosCallback1
+                  `cast`
+                (<Graphics.UI.GLFW.Types.Window>_R
+                 ->_R <GHC.Types.Double>_R
+                 ->_R <GHC.Types.Double>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+de3e86c35199b69771d45de55260eccb
+  cursorPosCallback1 ::
+    Graphics.UI.GLFW.Types.Window
+    -> GHC.Types.Double
+    -> GHC.Types.Double
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 4, Strictness: <L,A><S(S),1*U(U)><S(S),1*U(U)><S,U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (4, True, False)
+                (\ (w :: Graphics.UI.GLFW.Types.Window)
+                   (w1 :: GHC.Types.Double)
+                   (w2 :: GHC.Types.Double)
+                   (w3 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case w1 of ww { GHC.Types.D# ww1 ->
+                 case w2 of ww2 { GHC.Types.D# ww3 ->
+                 Main.$wcursorPosCallback ww1 ww3 w3 } }) -}
+d8d091cd8b6dba5889cadba7e7783dc0
+  displayPic ::
+    Graphics.Gloss.Internals.Data.Picture.Picture -> GHC.Types.IO ()
+  {- Arity: 2, Strictness: <S,1*U><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.displayPic1
+                  `cast`
+                (<Graphics.Gloss.Internals.Data.Picture.Picture>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+f25b16866ddc83876bb15e81b81ddc35
+  displayPic1 ::
+    Graphics.Gloss.Internals.Data.Picture.Picture
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 2, Strictness: <S,1*U><S,U>,
+     Unfolding: (\ (p :: Graphics.Gloss.Internals.Data.Picture.Picture)
+                   (eta :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case p of wild {
+                   DEFAULT
+                   -> case Main.displayPic3
+                      ret_ty (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+                      of {}
+                   Graphics.Gloss.Internals.Data.Picture.Bitmap width height ds ds1
+                   -> case GHC.Prim.newMutVar#
+                             @ [Graphics.Gloss.Internals.Rendering.State.Texture]
+                             @ GHC.Prim.RealWorld
+                             (GHC.Types.[] @ Graphics.Gloss.Internals.Rendering.State.Texture)
+                             eta of ds2 { (#,#) ipv ipv1 ->
+                      Graphics.Gloss.Internals.Rendering.Common.$wwithModelview
+                        width
+                        height
+                        (Graphics.Gloss.Internals.Rendering.Common.withClearBuffer1
+                           Graphics.Gloss.Data.Color.black
+                           (\ (w3 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                            case Graphics.Gloss.Internals.Rendering.Picture.renderPicture3
+                                   `cast`
+                                 (GHC.Types.N:IO[0] <()>_R)
+                                   w3 of ds3 { (#,#) ipv2 ipv3 ->
+                            case Graphics.Gloss.Internals.Rendering.Picture.renderPicture4
+                                   `cast`
+                                 (GHC.Types.N:IO[0] <()>_R)
+                                   ipv2 of ds4 { (#,#) ipv4 ipv5 ->
+                            case Graphics.GL.Functions.F02.ptr_glBlendFunc of ds5 { GHC.Ptr.FunPtr ds6 ->
+                            case {__dyn_ccall_GC "" GHC.Prim.Addr#
+                                                    -> GHC.Prim.Word#
+                                                    -> GHC.Prim.Word#
+                                                    -> GHC.Prim.State# GHC.Prim.RealWorld
+                                                    -> (# GHC.Prim.State# GHC.Prim.RealWorld #)}
+                                   ds6
+                                   770##
+                                   771##
+                                   ipv4 of wild1 { Unit# ds9 ->
+                            case Graphics.Gloss.Internals.Rendering.Picture.renderPicture9
+                                   Graphics.Gloss.Internals.Rendering.Picture.renderPicture8
+                                   ds9 of ds7 { (#,#) ipv6 ipv7 ->
+                            case Graphics.Gloss.Internals.Rendering.Picture.renderPicture7
+                                   (Graphics.Gloss.Internals.Rendering.State.State
+                                      GHC.Types.True
+                                      GHC.Types.False
+                                      GHC.Types.True
+                                      GHC.Types.False
+                                      ipv1)
+                                   Main.displayPic2
+                                   (Graphics.Gloss.Internals.Data.Picture.Pictures
+                                      (GHC.Types.:
+                                         @ Graphics.Gloss.Internals.Data.Picture.Picture
+                                         wild
+                                         (GHC.Types.[]
+                                            @ Graphics.Gloss.Internals.Data.Picture.Picture)))
+                                   ipv6 of ds8 { (#,#) ipv8 ipv9 ->
+                            Graphics.Gloss.Internals.Rendering.Picture.renderPicture9
+                              Graphics.Gloss.Internals.Rendering.Picture.renderPicture6
+                              ipv8 } } } } } })
+                             `cast`
+                           (Sym (GHC.Types.N:IO[0] <()>_R)))
+                          `cast`
+                        (Sym (GHC.Types.N:IO[0] <()>_R))
+                        ipv } }) -}
+ce3731dc3165cd8a36b54648c3503ccd
+  displayPic2 :: GHC.Types.Float
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.F# 1.0#) -}
+c496a2a09138327976956b7a99dba2d7
+  displayPic3 :: GHC.Types.IO ()
+  {- Strictness: x -}
+e4e837641922a44e5e39dc364daf3fa4
+  errorCallback :: Graphics.UI.GLFW.ErrorCallback
+  {- Arity: 3, Strictness: <L,A><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.errorCallback1
+                  `cast`
+                (<Graphics.UI.GLFW.Types.Error>_R
+                 ->_R <GHC.Base.String>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+5dcca16ce4bac897c02f327c6e8cb1cc
+  errorCallback1 ::
+    Graphics.UI.GLFW.Types.Error
+    -> GHC.Base.String
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 3, Strictness: <L,A><L,U>,
+     Unfolding: InlineRule (2, True, True)
+                (\ (err :: Graphics.UI.GLFW.Types.Error)
+                   (description :: GHC.Base.String) ->
+                 GHC.IO.Handle.Text.hPutStrLn1
+                   GHC.IO.Handle.FD.stderr
+                   description) -}
+7b69cb3c3effec03be3571b8541ad3ac
+  getAB :: GHC.Types.IO [[GHC.Types.Char]]
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.getAB1
+                  `cast`
+                (Sym (GHC.Types.N:IO[0] <[[GHC.Types.Char]]>_R)) -}
+ea518cf8c0e13ef1658f340929ec0d22
+  getAB1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, [[GHC.Types.Char]] #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.IO.Handle.FD.openFile1
+                        Main.addConnection3
+                        GHC.IO.IOMode.ReadMode
+                        s of ds1 { (#,#) ipv ipv1 ->
+                 case GHC.IO.Handle.Text.hGetContents1
+                        ipv1
+                        ipv of ds2 { (#,#) ipv2 ipv3 ->
+                 case GHC.List.$wlenAcc @ GHC.Types.Char ipv3 0# of ww2 { DEFAULT ->
+                 (# ipv2,
+                    Main.getAB2
+                      (case Data.OldList.lines ipv3 of wild {
+                         [] -> GHC.List.badHead @ GHC.Base.String
+                         : x ds3 -> x }) #) } } }) -}
+a8a5d6212cf4b1ac3d6428c69b1f2832
+  getAB2 :: [GHC.Types.Char] -> [[GHC.Types.Char]]
+  {- Unfolding: (Data.List.Split.Internals.splitOn
+                   @ GHC.Types.Char
+                   GHC.Classes.$fEqChar
+                   Main.getAB3) -}
+fbc3a6798a131eacc35cf56c0248329c
+  getAB3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# " "#) -}
+3047a056756b295ca9446dc6ca70f3b9
+  gnomeParams ::
+    Data.GraphViz.GraphvizParams
+      n
+      Data.Text.Internal.Lazy.Text
+      Data.Text.Internal.Lazy.Text
+      ()
+      Data.Text.Internal.Lazy.Text
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (\ @ n ->
+                 Data.GraphViz.Params
+                   @ n
+                   @ Data.Text.Internal.Lazy.Text
+                   @ Data.Text.Internal.Lazy.Text
+                   @ ()
+                   @ Data.Text.Internal.Lazy.Text
+                   GHC.Types.True
+                   Main.gnomeParams3
+                   (Data.GraphViz.Algorithms.Clustering.N
+                      @ ()
+                      @ (n, Data.Text.Internal.Lazy.Text))
+                   (Data.GraphViz.defaultParams7 @ ())
+                   (Data.GraphViz.defaultParams4 @ ())
+                   (Data.GraphViz.defaultParams3 @ ())
+                   (Main.gnomeParams2 @ n)
+                   (Main.gnomeParams1 @ n)) -}
+3bb4869c69c2a5e015fa60848a4c3c62
+  gnomeParams1 ::
+    (n, n, Data.GraphViz.Attributes.Values.EscString)
+    -> [Data.GraphViz.Attributes.Complete.Attribute]
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U(A,A,U)>m2,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ n (ds :: (n, n, Data.GraphViz.Attributes.Values.EscString)) ->
+                 case ds of wild { (,,) f t l ->
+                 GHC.Types.:
+                   @ Data.GraphViz.Attributes.Complete.Attribute
+                   (Data.GraphViz.Attributes.Complete.Label
+                      (Data.GraphViz.Attributes.Values.StrLabel l))
+                   (GHC.Types.[] @ Data.GraphViz.Attributes.Complete.Attribute) }) -}
+152c872c7ab4d53fc01c0a72b8d3a08b
+  gnomeParams10 :: [Data.GraphViz.Attributes.Values.StyleItem]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Data.GraphViz.Attributes.Values.StyleItem
+                   Main.gnomeParams11
+                   (GHC.Types.[] @ Data.GraphViz.Attributes.Values.StyleItem)) -}
+46a07665b73698dfc3ba103529a70625
+  gnomeParams11 :: Data.GraphViz.Attributes.Values.StyleItem
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (Data.GraphViz.Attributes.Values.SItem
+                   Data.GraphViz.Attributes.Values.Filled
+                   (GHC.Types.[] @ Data.Text.Internal.Lazy.Text)) -}
+88d6a32ccd21c297ca16f92dab9af563
+  gnomeParams12 :: Data.GraphViz.Attributes.Complete.Attribute
+  {- HasNoCafRefs, Strictness: m32,
+     Unfolding: (Data.GraphViz.Attributes.Complete.FillColor
+                   Main.gnomeParams13) -}
+8f89d6e7c3c26ac472e2d44043c503fe
+  gnomeParams13 :: [Data.GraphViz.Attributes.Colors.WeightedColor]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Data.GraphViz.Attributes.Colors.WeightedColor
+                   Main.gnomeParams14
+                   (GHC.Types.[] @ Data.GraphViz.Attributes.Colors.WeightedColor)) -}
+1219b60bed432b4de1d25185e1352826
+  gnomeParams14 :: Data.GraphViz.Attributes.Colors.WeightedColor
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (Data.GraphViz.Attributes.Colors.WC
+                   Main.gnomeParams15
+                   (GHC.Base.Nothing @ GHC.Types.Double)) -}
+fcf7a6a9598b490fee7a876526b1f7f4
+  gnomeParams15 :: Data.GraphViz.Attributes.Colors.Color
+  {- HasNoCafRefs, Strictness: m4,
+     Unfolding: (Data.GraphViz.Attributes.Colors.X11Color
+                   Data.GraphViz.Attributes.Colors.X11.White) -}
+f4f9353ef95b989bf4e7f11c55062883
+  gnomeParams16 :: Data.GraphViz.Attributes.Complete.Attribute
+  {- HasNoCafRefs, Strictness: m132,
+     Unfolding: (Data.GraphViz.Attributes.Complete.Shape
+                   Data.GraphViz.Attributes.Values.BoxShape) -}
+9a8d1ffa111733bb0858fa6200e00208
+  gnomeParams17 ::
+    Data.GraphViz.Types.Internal.Common.GlobalAttributes
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (Data.GraphViz.Types.Internal.Common.GraphAttrs
+                   Main.gnomeParams18) -}
+b30f62bdbc2bdacff98cc5e09b6c9ebb
+  gnomeParams18 :: [Data.GraphViz.Attributes.Complete.Attribute]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Data.GraphViz.Attributes.Complete.Attribute
+                   Main.gnomeParams24
+                   Main.gnomeParams19) -}
+0ad6bde68733c4c5f99b77289e01ab1b
+  gnomeParams19 :: [Data.GraphViz.Attributes.Complete.Attribute]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Data.GraphViz.Attributes.Complete.Attribute
+                   Main.gnomeParams20
+                   (GHC.Types.[] @ Data.GraphViz.Attributes.Complete.Attribute)) -}
+4afdd35e2494d00912dcbfd9a5f3c3f7
+  gnomeParams2 ::
+    (n, Data.GraphViz.Attributes.Values.EscString)
+    -> [Data.GraphViz.Attributes.Complete.Attribute]
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U(A,U)>m2,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ n (ds :: (n, Data.GraphViz.Attributes.Values.EscString)) ->
+                 case ds of wild { (,) n1 l ->
+                 GHC.Types.:
+                   @ Data.GraphViz.Attributes.Complete.Attribute
+                   (Data.GraphViz.Attributes.Complete.Label
+                      (Data.GraphViz.Attributes.Values.StrLabel l))
+                   (GHC.Types.[] @ Data.GraphViz.Attributes.Complete.Attribute) }) -}
+3870a0b056971519b4bd04fea755972f
+  gnomeParams20 :: Data.GraphViz.Attributes.Complete.Attribute
+  {- HasNoCafRefs, Strictness: m10,
+     Unfolding: (Data.GraphViz.Attributes.Complete.BgColor
+                   Main.gnomeParams21) -}
+07beeecad9e006871140839e05a7733b
+  gnomeParams21 :: [Data.GraphViz.Attributes.Colors.WeightedColor]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Data.GraphViz.Attributes.Colors.WeightedColor
+                   Main.gnomeParams22
+                   (GHC.Types.[] @ Data.GraphViz.Attributes.Colors.WeightedColor)) -}
+d58013df1fe396e7dc7a3907eaf53f5d
+  gnomeParams22 :: Data.GraphViz.Attributes.Colors.WeightedColor
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (Data.GraphViz.Attributes.Colors.WC
+                   Main.gnomeParams23
+                   (GHC.Base.Nothing @ GHC.Types.Double)) -}
+3dea165db08888b84bca8fe0ac7eefd6
+  gnomeParams23 :: Data.GraphViz.Attributes.Colors.Color
+  {- HasNoCafRefs, Strictness: m4,
+     Unfolding: (Data.GraphViz.Attributes.Colors.X11Color
+                   Data.GraphViz.Attributes.Colors.X11.Transparent) -}
+f9e75a2bd950cc828dcdb3fe84212844
+  gnomeParams24 :: Data.GraphViz.Attributes.Complete.Attribute
+  {- HasNoCafRefs, Strictness: m116,
+     Unfolding: (Data.GraphViz.Attributes.Complete.RankDir
+                   Data.GraphViz.Attributes.Values.FromLeft) -}
+f86b96beb882cd2bb4e2b368cb4f4e38
+  gnomeParams3 ::
+    [Data.GraphViz.Types.Internal.Common.GlobalAttributes]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Data.GraphViz.Types.Internal.Common.GlobalAttributes
+                   Main.gnomeParams17
+                   Main.gnomeParams4) -}
+d7bfd44b214e00589c7cf68a2a2622ee
+  gnomeParams4 ::
+    [Data.GraphViz.Types.Internal.Common.GlobalAttributes]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Data.GraphViz.Types.Internal.Common.GlobalAttributes
+                   Main.gnomeParams5
+                   (GHC.Types.[]
+                      @ Data.GraphViz.Types.Internal.Common.GlobalAttributes)) -}
+99f7ebb34700203bb1bd715e086d2243
+  gnomeParams5 ::
+    Data.GraphViz.Types.Internal.Common.GlobalAttributes
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (Data.GraphViz.Types.Internal.Common.NodeAttrs
+                   Main.gnomeParams6) -}
+e870cd78049c05e2a8f33ee66966240b
+  gnomeParams6 :: [Data.GraphViz.Attributes.Complete.Attribute]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Data.GraphViz.Attributes.Complete.Attribute
+                   Main.gnomeParams16
+                   Main.gnomeParams7) -}
+3033948441daf2e901414c22de4e4f90
+  gnomeParams7 :: [Data.GraphViz.Attributes.Complete.Attribute]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Data.GraphViz.Attributes.Complete.Attribute
+                   Main.gnomeParams12
+                   Main.gnomeParams8) -}
+45ae2ab1e0b9e0e6fe741250e060dea2
+  gnomeParams8 :: [Data.GraphViz.Attributes.Complete.Attribute]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Data.GraphViz.Attributes.Complete.Attribute
+                   Main.gnomeParams9
+                   (GHC.Types.[] @ Data.GraphViz.Attributes.Complete.Attribute)) -}
+88dbe79fc623d9599c1f37c4ce01067e
+  gnomeParams9 :: Data.GraphViz.Attributes.Complete.Attribute
+  {- HasNoCafRefs, Strictness: m141,
+     Unfolding: (Data.GraphViz.Attributes.Complete.Style
+                   Main.gnomeParams10) -}
+8d0a7d007bb7f6c2d6726082fd04ad4e
+  gnomes ::
+    Data.Graph.Inductive.PatriciaTree.Gr
+      Data.Text.Internal.Lazy.Text Data.Text.Internal.Lazy.Text
+  {- Unfolding: (Data.Graph.Inductive.PatriciaTree.$fGraphGr9
+                   @ Data.Text.Internal.Lazy.Text
+                   @ Data.Text.Internal.Lazy.Text
+                   Main.gnomes12
+                   Main.gnomes1
+                     `cast`
+                   (Sym (Data.Graph.Inductive.PatriciaTree.N:Gr[0]
+                             <Data.Text.Internal.Lazy.Text>_R
+                             <Data.Text.Internal.Lazy.Text>_R))) -}
+ac4181c297bf727b1e7f393a8fbf98c3
+  gnomes1 ::
+    Data.IntMap.Base.IntMap
+      (Data.IntMap.Base.IntMap [Data.Text.Internal.Lazy.Text],
+       Data.Text.Internal.Lazy.Text,
+       Data.IntMap.Base.IntMap [Data.Text.Internal.Lazy.Text])
+  {- Unfolding: (Data.IntMap.Base.fromList1
+                   @ (Data.IntMap.Base.IntMap [Data.Text.Internal.Lazy.Text],
+                      Data.Text.Internal.Lazy.Text,
+                      Data.IntMap.Base.IntMap [Data.Text.Internal.Lazy.Text])
+                   (Data.IntMap.Base.Nil
+                      @ (Data.IntMap.Base.IntMap [Data.Text.Internal.Lazy.Text],
+                         Data.Text.Internal.Lazy.Text,
+                         Data.IntMap.Base.IntMap [Data.Text.Internal.Lazy.Text]))
+                   Main.gnomes2) -}
+810601466724bf4fe398e4b5dc09a778
+  gnomes10 :: Data.Text.Internal.Lazy.Text
+  {- Unfolding: (Data.Text.Lazy.unpackCString# "Hello"#) -}
+e8d977452a21f8570f40c685fd2664af
+  gnomes11 :: GHC.Types.Int
+  {- HasNoCafRefs, Unfolding: (GHC.Types.I# 1#) -}
+2b8f3c5ff240a81f90ec37927a6863ea
+  gnomes12 ::
+    [Data.Graph.Inductive.Graph.LEdge Data.Text.Internal.Lazy.Text]
+  {- Unfolding: (GHC.Types.:
+                   @ (Data.Graph.Inductive.Graph.LEdge Data.Text.Internal.Lazy.Text)
+                   Main.gnomes13
+                   (GHC.Types.[]
+                      @ (Data.Graph.Inductive.Graph.LEdge
+                           Data.Text.Internal.Lazy.Text))) -}
+3b357576eb5383d70238e81e13b20890
+  gnomes13 ::
+    (GHC.Types.Int, GHC.Types.Int, Data.Text.Internal.Lazy.Text)
+  {- Unfolding: ((Main.gnomes11, Main.gnomes7, Main.gnomes14)) -}
+1b85fc40ac0b6b068cdb8f7ccc00e10a
+  gnomes14 :: Data.Text.Internal.Lazy.Text
+  {- Unfolding: (Data.Text.Lazy.unpackCString# "?"#) -}
+d5ef7f6f27057dde59ecf3fad29c46ff
+  gnomes2 ::
+    [(Data.IntSet.Base.Key,
+      (Data.IntMap.Base.IntMap [Data.Text.Internal.Lazy.Text],
+       Data.Text.Internal.Lazy.Text,
+       Data.IntMap.Base.IntMap [Data.Text.Internal.Lazy.Text]))]
+  {- Unfolding: (GHC.Types.:
+                   @ (Data.IntSet.Base.Key,
+                      (Data.IntMap.Base.IntMap [Data.Text.Internal.Lazy.Text],
+                       Data.Text.Internal.Lazy.Text,
+                       Data.IntMap.Base.IntMap [Data.Text.Internal.Lazy.Text]))
+                   Main.gnomes8
+                   Main.gnomes3) -}
+9b916208e448bdf9c19ff0cd28ffac5f
+  gnomes3 ::
+    [(Data.IntSet.Base.Key,
+      (Data.IntMap.Base.IntMap [Data.Text.Internal.Lazy.Text],
+       Data.Text.Internal.Lazy.Text,
+       Data.IntMap.Base.IntMap [Data.Text.Internal.Lazy.Text]))]
+  {- Unfolding: (GHC.Types.:
+                   @ (Data.IntSet.Base.Key,
+                      (Data.IntMap.Base.IntMap [Data.Text.Internal.Lazy.Text],
+                       Data.Text.Internal.Lazy.Text,
+                       Data.IntMap.Base.IntMap [Data.Text.Internal.Lazy.Text]))
+                   Main.gnomes4
+                   (GHC.Types.[]
+                      @ (Data.IntSet.Base.Key,
+                         (Data.IntMap.Base.IntMap [Data.Text.Internal.Lazy.Text],
+                          Data.Text.Internal.Lazy.Text,
+                          Data.IntMap.Base.IntMap [Data.Text.Internal.Lazy.Text])))) -}
+31bd8fbed92c6edeeac19234a20ead61
+  gnomes4 ::
+    (Data.IntSet.Base.Key,
+     (Data.IntMap.Base.IntMap [Data.Text.Internal.Lazy.Text],
+      Data.Text.Internal.Lazy.Text,
+      Data.IntMap.Base.IntMap [Data.Text.Internal.Lazy.Text]))
+  {- Unfolding: ((Main.gnomes7, Main.gnomes5)) -}
+4a9b4d4b6dda7746ff9527fc6325f83a
+  gnomes5 ::
+    (Data.IntMap.Base.IntMap [Data.Text.Internal.Lazy.Text],
+     Data.Text.Internal.Lazy.Text,
+     Data.IntMap.Base.IntMap [Data.Text.Internal.Lazy.Text])
+  {- Unfolding: ((Data.IntMap.Base.Nil
+                    @ [Data.Text.Internal.Lazy.Text],
+                  Main.gnomes6,
+                  Data.IntMap.Base.Nil @ [Data.Text.Internal.Lazy.Text])) -}
+23a1884c2812c93a22a1700da36acb81
+  gnomes6 :: Data.Text.Internal.Lazy.Text
+  {- Unfolding: (Data.Text.Lazy.unpackCString# "World"#) -}
+96e6de6f54aae04ab361c906c38ab89b
+  gnomes7 :: GHC.Types.Int
+  {- HasNoCafRefs, Unfolding: (GHC.Types.I# 3#) -}
+802659d66825359472a166fdd4054237
+  gnomes8 ::
+    (Data.IntSet.Base.Key,
+     (Data.IntMap.Base.IntMap [Data.Text.Internal.Lazy.Text],
+      Data.Text.Internal.Lazy.Text,
+      Data.IntMap.Base.IntMap [Data.Text.Internal.Lazy.Text]))
+  {- Unfolding: ((Main.gnomes11, Main.gnomes9)) -}
+e5fd9962ce00220ad7e318dd1dbaa394
+  gnomes9 ::
+    (Data.IntMap.Base.IntMap [Data.Text.Internal.Lazy.Text],
+     Data.Text.Internal.Lazy.Text,
+     Data.IntMap.Base.IntMap [Data.Text.Internal.Lazy.Text])
+  {- Unfolding: ((Data.IntMap.Base.Nil
+                    @ [Data.Text.Internal.Lazy.Text],
+                  Main.gnomes10,
+                  Data.IntMap.Base.Nil @ [Data.Text.Internal.Lazy.Text])) -}
+0f7be97d2d42ba4ad3f62dd32a7b601a
+  hGetContentsStrict ::
+    GHC.IO.Handle.Types.Handle -> GHC.Types.IO GHC.Base.String
+  {- Arity: 2, Strictness: <S,U><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.hGetContentsStrict1
+                  `cast`
+                (<GHC.IO.Handle.Types.Handle>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <GHC.Base.String>_R)) -}
+848ab98103c2d6a4bc85f5450207ab53
+  hGetContentsStrict1 ::
+    GHC.IO.Handle.Types.Handle
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, GHC.Base.String #)
+  {- Arity: 2, Strictness: <S,U><S,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (h :: GHC.IO.Handle.Types.Handle)
+                   (eta :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.IO.Handle.Text.hGetContents1
+                        h
+                        eta of ds1 { (#,#) ipv ipv1 ->
+                 case GHC.List.$wlenAcc @ GHC.Types.Char ipv1 0# of ww2 { DEFAULT ->
+                 (# ipv, ipv1 #) } }) -}
+3adc72f2bd2ab1dd4b912487dd2f3aa2
+  hei :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 480#) -}
+25dc3a67335f42d7fdfd08a19ae71fef
+  initialiseFile ::
+    [GHC.Types.Char] -> [GHC.Types.Char] -> GHC.Types.IO ()
+  {- Arity: 3, Strictness: <L,1*U><L,1*U><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.initialiseFile1
+                  `cast`
+                (<[GHC.Types.Char]>_R
+                 ->_R <[GHC.Types.Char]>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+748a5a21c3ccb3abc9717bd714e2985a
+  initialiseFile1 ::
+    [GHC.Types.Char]
+    -> [GHC.Types.Char]
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 3, Strictness: <L,1*U><L,1*U><S,U>,
+     Unfolding: (\ (a :: [GHC.Types.Char])
+                   (b :: [GHC.Types.Char])
+                   (eta :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 System.IO.writeFile1
+                   Main.addConnection3
+                   (GHC.Base.++
+                      @ GHC.Types.Char
+                      a
+                      (GHC.CString.unpackAppendCString#
+                         " "#
+                         (GHC.Base.++ @ GHC.Types.Char b Main.addConnection2)))
+                   eta) -}
+f77839ab02baf8f02ea8c5648ec7bbbb
+  keyCallback :: Graphics.UI.GLFW.KeyCallback
+  {- Arity: 6, Strictness: <L,1*U(U)><S,1*U><L,A><L,U><L,A><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.keyCallback1
+                  `cast`
+                (<Graphics.UI.GLFW.Types.Window>_R
+                 ->_R <Graphics.UI.GLFW.Types.Key>_R
+                 ->_R <GHC.Types.Int>_R
+                 ->_R <Graphics.UI.GLFW.Types.KeyState>_R
+                 ->_R <Graphics.UI.GLFW.Types.ModifierKeys>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+bf7f524ccf1fb4cf1db53ea5867c4248
+  keyCallback1 ::
+    Graphics.UI.GLFW.Types.Window
+    -> Graphics.UI.GLFW.Types.Key
+    -> GHC.Types.Int
+    -> Graphics.UI.GLFW.Types.KeyState
+    -> Graphics.UI.GLFW.Types.ModifierKeys
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 6, Strictness: <L,1*U(U)><S,1*U><L,A><L,U><L,A><S,U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (6, True, True)
+                (\ (w :: Graphics.UI.GLFW.Types.Window)
+                   (w1 :: Graphics.UI.GLFW.Types.Key)
+                   (w2 :: GHC.Types.Int)
+                   (w3 :: Graphics.UI.GLFW.Types.KeyState)
+                   (w4 :: Graphics.UI.GLFW.Types.ModifierKeys)
+                   (w5 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 Main.$wkeyCallback w w1 w3 w5) -}
+91c08177b8fb15ac1f7069e4fda44eb3
+  keyCallback2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "space"#) -}
+b9b47b56defc309c920a0540d6bac57e
+  main :: GHC.Types.IO ()
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
+2378cf73c7941e8e694e445ec946ef0f
+  main1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.IO.Handle.FD.openFile1
+                        Main.main24
+                        GHC.IO.IOMode.ReadMode
+                        s of ds1 { (#,#) ipv ipv1 ->
+                 case Main.main16 ipv1 ipv of ds2 { (#,#) ipv2 ipv3 ->
+                 case Graphics.UI.GLUT.Raw.Functions.ptr_glutExit
+                        @ (GHC.Types.IO ()) of ds { GHC.Ptr.FunPtr ds3 ->
+                 case {__dyn_ccall_GC "" GHC.Prim.Addr#
+                                         -> GHC.Prim.State# GHC.Prim.RealWorld
+                                         -> (# GHC.Prim.State# GHC.Prim.RealWorld #)}
+                        ds3
+                        ipv2 of wild { Unit# ds4 ->
+                 case System.Environment.getProgName1
+                        ds4 of ds5 { (#,#) ipv4 ipv5 ->
+                 case System.Environment.getArgs1 ipv4 of ds6 { (#,#) ipv6 ipv7 ->
+                 case Graphics.UI.GLUT.Initialization.getArgsAndInitialize2
+                        ipv5
+                        ipv7
+                        ipv6 of ds7 { (#,#) ipv8 ipv9 ->
+                 case Graphics.UI.GLFW.setErrorCallback1
+                        Main.main15
+                        ipv8 of ds8 { (#,#) ipv10 ipv11 ->
+                 case {__pkg_ccall_GC bindings-GLFW-3.1.2.2@bindings-GLFW-3.1.2.2-8A8NDyit2GUAksQpR7G7mj glfwInit GHC.Prim.State#
+                                                                                                                    GHC.Prim.RealWorld
+                                                                                                                  -> (# GHC.Prim.State#
+                                                                                                                          GHC.Prim.RealWorld,
+                                                                                                                        GHC.Prim.Int# #)}
+                        ipv10 of wild1 { (#,#) ds9 ds10 ->
+                 case GHC.Prim.newMutVar#
+                        @ [Graphics.Gloss.Internals.Rendering.State.Texture]
+                        @ GHC.Prim.RealWorld
+                        (GHC.Types.[] @ Graphics.Gloss.Internals.Rendering.State.Texture)
+                        ds9 of ds11 { (#,#) ipv12 ipv13 ->
+                 case GHC.Prim.narrow32Int# ds10 of wild2 {
+                   DEFAULT
+                   -> case Graphics.UI.GLFW.C.$fCCIntBool3 wild2
+                      ret_ty (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+                      of {}
+                   0#
+                   -> case GHC.Prim.raiseIO#
+                             @ GHC.Exception.SomeException
+                             @ GHC.Prim.Any
+                             Main.main13
+                             ipv12
+                      ret_ty (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+                      of {}
+                   1#
+                   -> case Graphics.UI.GLFW.createWindow1
+                             Main.wid
+                             Main.hei
+                             Main.main12
+                             (GHC.Base.Nothing @ Graphics.UI.GLFW.Types.Monitor)
+                             (GHC.Base.Nothing @ Graphics.UI.GLFW.Types.Window)
+                             ipv12 of ds12 { (#,#) ipv14 ipv15 ->
+                      case ipv15 of wild3 {
+                        GHC.Base.Nothing
+                        -> case Graphics.UI.GLFW.terminate1
+                                  ipv14 of ds13 { (#,#) ipv16 ipv17 ->
+                           case GHC.Prim.raiseIO#
+                                  @ GHC.Exception.SomeException
+                                  @ GHC.Prim.Any
+                                  Main.main13
+                                  ipv16
+                           ret_ty (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+                           of {} }
+                        GHC.Base.Just x
+                        -> case x `cast`
+                                (Graphics.UI.GLFW.Types.N:Window[0]) of ds13 { GHC.Ptr.Ptr ds14 ->
+                           case {__pkg_ccall_GC bindings-GLFW-3.1.2.2@bindings-GLFW-3.1.2.2-8A8NDyit2GUAksQpR7G7mj glfwMakeContextCurrent GHC.Prim.Addr#
+                                                                                                                                          -> GHC.Prim.State#
+                                                                                                                                               GHC.Prim.RealWorld
+                                                                                                                                          -> (# GHC.Prim.State#
+                                                                                                                                                  GHC.Prim.RealWorld #)}
+                                  ds14
+                                  ipv14 of wild4 { Unit# ds15 ->
+                           case Graphics.UI.GLFW.$wsetKeyCallback
+                                  ds14
+                                  Main.main11
+                                  ds15 of ds16 { (#,#) ipv16 ipv17 ->
+                           case Graphics.UI.GLFW.$wsetCharCallback
+                                  ds14
+                                  Main.main10
+                                  ipv16 of ds17 { (#,#) ipv18 ipv19 ->
+                           case Graphics.UI.GLFW.$wsetCursorPosCallback
+                                  ds14
+                                  Main.main9
+                                  ipv18 of ds18 { (#,#) ipv20 ipv21 ->
+                           case Graphics.UI.GLFW.$wsetMouseButtonCallback
+                                  ds14
+                                  Main.main3
+                                  ipv20 of ds19 { (#,#) ipv22 ipv23 ->
+                           case Main.$wmainLoop ds14 ipv22 of ds20 { (#,#) ipv24 ipv25 ->
+                           case Graphics.UI.GLFW.$wdestroyWindow
+                                  ds14
+                                  ipv24 of ds21 { (#,#) ipv26 ipv27 ->
+                           case Graphics.UI.GLFW.terminate1
+                                  ipv26 of ds22 { (#,#) ipv28 ipv29 ->
+                           case GHC.Prim.raiseIO#
+                                  @ GHC.Exception.SomeException
+                                  @ GHC.Prim.Any
+                                  Main.main2
+                                  ipv28
+                           ret_ty (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+                           of {} } } } } } } } } } } } } } } } } } } } } } }) -}
+2ba90066175c8cdd50a53b9b6bcf3921
+  main10 :: GHC.Base.Maybe Graphics.UI.GLFW.CharCallback
+  {- Unfolding: (GHC.Base.Just
+                   @ Graphics.UI.GLFW.CharCallback
+                   Main.charCallback1
+                     `cast`
+                   (<Graphics.UI.GLFW.Types.Window>_R
+                    ->_R <GHC.Types.Char>_R
+                    ->_R Sym (GHC.Types.N:IO[0] <()>_R))) -}
+d40702d705572981155b0a3b0f8d1ab2
+  main11 :: GHC.Base.Maybe Graphics.UI.GLFW.KeyCallback
+  {- Unfolding: (GHC.Base.Just
+                   @ Graphics.UI.GLFW.KeyCallback
+                   Main.keyCallback1
+                     `cast`
+                   (<Graphics.UI.GLFW.Types.Window>_R
+                    ->_R <Graphics.UI.GLFW.Types.Key>_R
+                    ->_R <GHC.Types.Int>_R
+                    ->_R <Graphics.UI.GLFW.Types.KeyState>_R
+                    ->_R <Graphics.UI.GLFW.Types.ModifierKeys>_R
+                    ->_R Sym (GHC.Types.N:IO[0] <()>_R))) -}
+01a6f6b4e0ab6bd745f8ca12e332c327
+  main12 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "Simple example, haskell style"#) -}
+4342f5b9f337b4ecc257da1a979d971e
+  main13 :: GHC.Exception.SomeException
+  {- Unfolding: (GHC.IO.Exception.$fExceptionExitCode_$ctoException
+                   Main.main14) -}
+f4d7dcdeb363021572de8300b597e172
+  main14 :: GHC.IO.Exception.ExitCode
+  {- HasNoCafRefs,
+     Unfolding: (GHC.IO.Exception.ExitFailure Main.gnomes11) -}
+e0b73a3452414fcecfc6e4e4e2afc987
+  main15 :: GHC.Base.Maybe Graphics.UI.GLFW.ErrorCallback
+  {- Unfolding: (GHC.Base.Just
+                   @ Graphics.UI.GLFW.ErrorCallback
+                   Main.errorCallback1
+                     `cast`
+                   (<Graphics.UI.GLFW.Types.Error>_R
+                    ->_R <GHC.Base.String>_R
+                    ->_R Sym (GHC.Types.N:IO[0] <()>_R))) -}
+71d919566b22f0623a40e3249abd9b7f
+  main16 ::
+    GHC.IO.Handle.Types.Handle
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 2, Strictness: <S,U><S,U>,
+     Unfolding: (\ (handle :: GHC.IO.Handle.Types.Handle)
+                   (eta :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.IO.Handle.Text.hGetContents1
+                        handle
+                        eta of ds1 { (#,#) ipv ipv1 ->
+                 case Main.main17
+                        (Data.OldList.lines ipv1)
+                        ipv of ds2 { (#,#) ipv2 ipv3 ->
+                 GHC.IO.Handle.hClose1 handle ipv2 } }) -}
+af6c1a0b927ad4cc1a703a00a42d4c95
+  main17 ::
+    [GHC.Base.String]
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 2, Strictness: <S,1*U><S,U>,
+     Unfolding: (\ (ds :: [GHC.Base.String])
+                   (eta :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case ds of wild {
+                   []
+                   -> GHC.IO.Handle.Text.hPutStr2
+                        GHC.IO.Handle.FD.stdout
+                        Main.main23
+                        GHC.Types.True
+                        eta
+                   : x ds1
+                   -> case ds1 of wild1 {
+                        []
+                        -> GHC.IO.Handle.Text.hPutStr2
+                             GHC.IO.Handle.FD.stdout
+                             Main.main23
+                             GHC.Types.True
+                             eta
+                        : ipv ipv1
+                        -> case Main.main18 x eta of ds2 { (#,#) ipv2 ipv3 ->
+                           Main.main_$sstore ipv2 ipv ipv1 } } }) -}
+014fc1a475fd1ed3c0dfe62d2214a3a1
+  main18 ::
+    GHC.Base.String
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 2, Strictness: <L,U><S,U>,
+     Unfolding: (\ (x :: GHC.Base.String)
+                   (eta :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 let {
+                   line :: [[GHC.Types.Char]] = Main.getAB2 x
+                 } in
+                 case GHC.List.elem
+                        @ [GHC.Types.Char]
+                        GHC.Classes.$fEq[]_$s$fEq[]1
+                        Main.main22
+                        line of wild {
+                   GHC.Types.False
+                   -> case GHC.List.elem
+                             @ [GHC.Types.Char]
+                             GHC.Classes.$fEq[]_$s$fEq[]1
+                             Main.main21
+                             line of wild1 {
+                        GHC.Types.False
+                        -> case GHC.List.elem
+                                  @ [GHC.Types.Char]
+                                  GHC.Classes.$fEq[]_$s$fEq[]1
+                                  Main.main20
+                                  line of wild2 {
+                             GHC.Types.False
+                             -> GHC.IO.Handle.Text.hPutStr2
+                                  GHC.IO.Handle.FD.stdout
+                                  Main.main19
+                                  GHC.Types.True
+                                  eta
+                             GHC.Types.True
+                             -> Main.addConnection1
+                                  (GHC.List.$w!! @ [GHC.Types.Char] line 1#)
+                                  (GHC.List.$w!! @ [GHC.Types.Char] line 2#)
+                                  eta }
+                        GHC.Types.True
+                        -> Main.addNode1
+                             (GHC.List.$w!! @ [GHC.Types.Char] line 1#)
+                             (GHC.List.$w!! @ [GHC.Types.Char] line 2#)
+                             (GHC.List.$w!! @ [GHC.Types.Char] line 3#)
+                             eta }
+                   GHC.Types.True
+                   -> Main.initialiseFile1
+                        (GHC.List.$w!! @ [GHC.Types.Char] line 2#)
+                        (GHC.List.$w!! @ [GHC.Types.Char] line 3#)
+                        eta }) -}
+1de344e9de48979a4f9441b4da1f17b6
+  main19 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "done"#) -}
+d5947aeebf3ffbbd9508b2515826f2b6
+  main2 :: GHC.Exception.SomeException
+  {- Unfolding: (GHC.IO.Exception.$fExceptionExitCode_$ctoException
+                   GHC.IO.Exception.ExitSuccess) -}
+e58c42cff2ad546a41ebcbdbabaa3c20
+  main20 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "edge"#) -}
+c5f7348ae3fb75528ea931b3f7f9d78e
+  main21 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "node"#) -}
+1855e91dc66d137fbaad604d1adf67d7
+  main22 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "graph"#) -}
+4518c463bc2526c833e4d8ec7c47afe5
+  main23 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "done storing nodes"#) -}
+02cdb2fb59f3e6d6b46d6a72ffb75666
+  main24 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "graphtest.dot.plain"#) -}
+4ee46ab6374b1e85cb77a7777c7721ec
+  main25 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1,
+     Unfolding: (GHC.TopHandler.runMainIO1
+                   @ ()
+                   Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R))) -}
+f69d097eeb9685760551dbfe1b5fb719
+  main3 :: GHC.Base.Maybe Graphics.UI.GLFW.MouseButtonCallback
+  {- Unfolding: (GHC.Base.Just
+                   @ Graphics.UI.GLFW.MouseButtonCallback
+                   Main.main4
+                     `cast`
+                   (<Graphics.UI.GLFW.Types.Window>_R
+                    ->_R <Graphics.UI.GLFW.Types.MouseButton>_R
+                    ->_R <Graphics.UI.GLFW.Types.MouseButtonState>_R
+                    ->_R <Graphics.UI.GLFW.Types.ModifierKeys>_R
+                    ->_R Sym (GHC.Types.N:IO[0] <()>_R))) -}
+623d603cba0d532abb506db4985ac147
+  main4 ::
+    Graphics.UI.GLFW.Types.Window
+    -> Graphics.UI.GLFW.Types.MouseButton
+    -> Graphics.UI.GLFW.Types.MouseButtonState
+    -> Graphics.UI.GLFW.Types.ModifierKeys
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 5, Strictness: <L,A><S,U><L,U><L,A><S,U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (5, True, True)
+                (\ (w :: Graphics.UI.GLFW.Types.Window)
+                   (w1 :: Graphics.UI.GLFW.Types.MouseButton)
+                   (w2 :: Graphics.UI.GLFW.Types.MouseButtonState)
+                   (w3 :: Graphics.UI.GLFW.Types.ModifierKeys)
+                   (w4 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 Main.$wmouseButtonCallback w1 w2 w4) -}
+059f8f314a497f2425c16a979c857617
+  main5 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "down"#) -}
+9926f6dce021d330c748dcd131e5d142
+  main6 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "up"#) -}
+e4b6f9d22e513635607b1f95f3b29d6a
+  main7 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (eta :: GHC.Prim.State#
+                             GHC.Prim.RealWorld)[OneShot] ->
+                 GHC.IO.Handle.Text.hPutStr2
+                   GHC.IO.Handle.FD.stdout
+                   Main.main8
+                   GHC.Types.True
+                   eta) -}
+39823142a22f10bb0834b6de5bdd8da4
+  main8 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "other"#) -}
+bbe2aaf5a414febdee0d09bed3ca18cf
+  main9 :: GHC.Base.Maybe Graphics.UI.GLFW.CursorPosCallback
+  {- Unfolding: (GHC.Base.Just
+                   @ Graphics.UI.GLFW.CursorPosCallback
+                   Main.cursorPosCallback1
+                     `cast`
+                   (<Graphics.UI.GLFW.Types.Window>_R
+                    ->_R <GHC.Types.Double>_R
+                    ->_R <GHC.Types.Double>_R
+                    ->_R Sym (GHC.Types.N:IO[0] <()>_R))) -}
+348d531026da2d8d07c65b807a53a77a
+  mainLoop ::
+    Graphics.UI.GLFW.Types.Window
+    -> Graphics.Gloss.Internals.Rendering.State.State
+    -> GHC.Types.IO ()
+  {- Arity: 3, Strictness: <S(S),1*U(U)><L,A><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.mainLoop1
+                  `cast`
+                (<Graphics.UI.GLFW.Types.Window>_R
+                 ->_R <Graphics.Gloss.Internals.Rendering.State.State>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+ee6f56f5f204b653dc4c26b7874da002
+  mainLoop1 ::
+    Graphics.UI.GLFW.Types.Window
+    -> Graphics.Gloss.Internals.Rendering.State.State
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 3, Strictness: <S(S),1*U(U)><L,A><S,U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ (w :: Graphics.UI.GLFW.Types.Window)
+                   (w1 :: Graphics.Gloss.Internals.Rendering.State.State)
+                   (w2 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case w `cast`
+                      (Graphics.UI.GLFW.Types.N:Window[0]) of ww { GHC.Ptr.Ptr ww1 ->
+                 Main.$wmainLoop ww1 w2 }) -}
+730b0da35d68c3e944306b4ec4ccfd20
+  main_$sstore ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> [GHC.Types.Char]
+    -> [[GHC.Types.Char]]
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 3, Strictness: <S,U><L,U><L,U> -}
+b4e42da70e48c46d846acbbe2401a180
+  maybe' :: GHC.Base.Maybe a -> b -> (a -> b) -> b
+  {- Arity: 3, HasNoCafRefs, Strictness: <S,1*U><L,1*U><L,1*C1(U)>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   @ b
+                   (m :: GHC.Base.Maybe a)
+                   (nothingRes :: b)
+                   (f :: a -> b) ->
+                 case m of wild {
+                   GHC.Base.Nothing -> nothingRes GHC.Base.Just x -> f x }) -}
+0697a86a12bb0815b618edf0d68a13a7
+  mouseButtonCallback :: Graphics.UI.GLFW.MouseButtonCallback
+  {- Arity: 5, Strictness: <L,A><S,U><L,U><L,A><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.main4
+                  `cast`
+                (<Graphics.UI.GLFW.Types.Window>_R
+                 ->_R <Graphics.UI.GLFW.Types.MouseButton>_R
+                 ->_R <Graphics.UI.GLFW.Types.MouseButtonState>_R
+                 ->_R <Graphics.UI.GLFW.Types.ModifierKeys>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+190d01c5613a82c17e4856a180cc8190
+  readFileStrict :: GHC.IO.FilePath -> GHC.Types.IO GHC.Base.String
+  {- Arity: 2, Strictness: <L,U><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.readFileStrict1
+                  `cast`
+                (<GHC.IO.FilePath>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <GHC.Base.String>_R)) -}
+3111138562f4c7cc714d33046bcb6a98
+  readFileStrict1 ::
+    GHC.IO.FilePath
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, GHC.Base.String #)
+  {- Arity: 2, Strictness: <L,U><S,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (name :: GHC.IO.FilePath)
+                   (eta :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.IO.Handle.FD.openFile1
+                        name
+                        GHC.IO.IOMode.ReadMode
+                        eta of ds1 { (#,#) ipv ipv1 ->
+                 Main.hGetContentsStrict1 ipv1 ipv }) -}
+930cf65d7bcd91dccd2ce921ce6f9783
+  readfile :: GHC.IO.FilePath -> GHC.Types.IO ()
+  {- Arity: 2, Strictness: <L,U><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.readfile1
+                  `cast`
+                (<GHC.IO.FilePath>_R ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+ec5339b05eb76a24b97d622171466517
+  readfile1 ::
+    GHC.IO.FilePath
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 2, Strictness: <L,U><S,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (x :: GHC.IO.FilePath)
+                   (eta :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.IO.Handle.FD.openFile1
+                        x
+                        GHC.IO.IOMode.ReadMode
+                        eta of ds1 { (#,#) ipv ipv1 ->
+                 Main.main16 ipv1 ipv }) -}
+8e1dd097fb6ecd75bb87472903958dfe
+  save :: GHC.Base.String -> GHC.Types.IO ()
+  {- Arity: 2, Strictness: <L,U><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.main18
+                  `cast`
+                (<GHC.Base.String>_R ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+9fdad8da21fa97e6281c885b0ceb9d44
+  store :: [GHC.Base.String] -> GHC.Types.IO ()
+  {- Arity: 2, Strictness: <S,1*U><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.main17
+                  `cast`
+                (<[GHC.Base.String]>_R ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+9ef24b6a4edcf7e54e1cb824dcaad019
+  unless' :: GHC.Base.Monad m => m GHC.Types.Bool -> m () -> m ()
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(LC(C(S))LLL),U(1*U,1*C1(C1(U)),A,A,A)><L,U><L,U>,
+     Unfolding: (\ @ (m :: * -> *)
+                   ($dMonad :: GHC.Base.Monad m)
+                   (eta :: m GHC.Types.Bool)
+                   (eta1 :: m ()) ->
+                 let {
+                   $dApplicative :: GHC.Base.Applicative m
+                   = GHC.Base.$p1Monad @ m $dMonad
+                 } in
+                 GHC.Base.>>=
+                   @ m
+                   $dMonad
+                   @ GHC.Types.Bool
+                   @ ()
+                   eta
+                   (\ (b :: GHC.Types.Bool) ->
+                    Control.Monad.unless @ m $dApplicative b eta1)) -}
+f11fcbf0ef1579077af7351cc2965c0a
+  wid :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 640#) -}
+"SC:store0" [ALWAYS] forall (sc :: GHC.Prim.State#
+                                     GHC.Prim.RealWorld)
+                            (sc1 :: [GHC.Types.Char])
+                            (sc2 :: [[GHC.Types.Char]])
+  Main.main17 (GHC.Types.: @ GHC.Base.String sc1 sc2) sc
+  = Main.main_$sstore sc sc1 sc2
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+

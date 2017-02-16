@@ -1,0 +1,17 @@
+Configuring bindings-GLFW-3.1.2.2...
+Building bindings-GLFW-3.1.2.2...
+Preprocessing library bindings-GLFW-3.1.2.2...
+GLFW.hsc: In function ‘main’:
+GLFW.hsc:323:5: warning: format ‘%lu’ expects argument of type ‘long unsigned int’, but argument 2 has type ‘int’ [-Wformat=]
+GLFW.hsc:323:5: warning: format ‘%lu’ expects argument of type ‘long unsigned int’, but argument 2 has type ‘int’ [-Wformat=]
+GLFW.hsc:323:5: warning: format ‘%lu’ expects argument of type ‘long unsigned int’, but argument 2 has type ‘int’ [-Wformat=]
+GLFW.hsc:330:5: warning: format ‘%lu’ expects argument of type ‘long unsigned int’, but argument 2 has type ‘int’ [-Wformat=]
+GLFW.hsc:330:5: warning: format ‘%lu’ expects argument of type ‘long unsigned int’, but argument 2 has type ‘int’ [-Wformat=]
+GLFW.hsc:330:5: warning: format ‘%lu’ expects argument of type ‘long unsigned int’, but argument 2 has type ‘int’ [-Wformat=]
+GLFW.hsc:420:5: warning: format ‘%lu’ expects argument of type ‘long unsigned int’, but argument 2 has type ‘int’ [-Wformat=]
+GLFW.hsc:420:5: warning: format ‘%lu’ expects argument of type ‘long unsigned int’, but argument 2 has type ‘int’ [-Wformat=]
+GLFW.hsc:420:5: warning: format ‘%lu’ expects argument of type ‘long unsigned int’, but argument 2 has type ‘int’ [-Wformat=]
+[1 of 1] Compiling Bindings.GLFW    ( .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Bindings/GLFW.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Bindings/GLFW.o )
+Installing library in
+/home/alexandra/.stack/snapshots/x86_64-linux/lts-8.0/8.0.2/lib/x86_64-linux-ghc-8.0.2/bindings-GLFW-3.1.2.2-8A8NDyit2GUAksQpR7G7mj
+Registering bindings-GLFW-3.1.2.2...

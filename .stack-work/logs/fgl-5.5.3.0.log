@@ -1,0 +1,35 @@
+Configuring fgl-5.5.3.0...
+Building fgl-5.5.3.0...
+Preprocessing library fgl-5.5.3.0...
+[ 1 of 29] Compiling Paths_fgl        ( .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/autogen/Paths_fgl.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Paths_fgl.o )
+[ 2 of 29] Compiling Data.Graph.Inductive.Internal.Thread ( Data/Graph/Inductive/Internal/Thread.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Data/Graph/Inductive/Internal/Thread.o )
+[ 3 of 29] Compiling Data.Graph.Inductive.Internal.Queue ( Data/Graph/Inductive/Internal/Queue.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Data/Graph/Inductive/Internal/Queue.o )
+[ 4 of 29] Compiling Data.Graph.Inductive.Internal.Heap ( Data/Graph/Inductive/Internal/Heap.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Data/Graph/Inductive/Internal/Heap.o )
+[ 5 of 29] Compiling Data.Graph.Inductive.Graph ( Data/Graph/Inductive/Graph.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Data/Graph/Inductive/Graph.o )
+[ 6 of 29] Compiling Data.Graph.Inductive.Internal.RootPath ( Data/Graph/Inductive/Internal/RootPath.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Data/Graph/Inductive/Internal/RootPath.o )
+[ 7 of 29] Compiling Data.Graph.Inductive.Monad ( Data/Graph/Inductive/Monad.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Data/Graph/Inductive/Monad.o )
+[ 8 of 29] Compiling Data.Graph.Inductive.Monad.IOArray ( Data/Graph/Inductive/Monad/IOArray.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Data/Graph/Inductive/Monad/IOArray.o )
+[ 9 of 29] Compiling Data.Graph.Inductive.Monad.STArray ( Data/Graph/Inductive/Monad/STArray.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Data/Graph/Inductive/Monad/STArray.o )
+[10 of 29] Compiling Data.Graph.Inductive.NodeMap ( Data/Graph/Inductive/NodeMap.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Data/Graph/Inductive/NodeMap.o )
+[11 of 29] Compiling Data.Graph.Inductive.PatriciaTree ( Data/Graph/Inductive/PatriciaTree.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Data/Graph/Inductive/PatriciaTree.o )
+[12 of 29] Compiling Data.Graph.Inductive.Query.ArtPoint ( Data/Graph/Inductive/Query/ArtPoint.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Data/Graph/Inductive/Query/ArtPoint.o )
+[13 of 29] Compiling Data.Graph.Inductive.Query.BFS ( Data/Graph/Inductive/Query/BFS.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Data/Graph/Inductive/Query/BFS.o )
+[14 of 29] Compiling Data.Graph.Inductive.Query.Indep ( Data/Graph/Inductive/Query/Indep.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Data/Graph/Inductive/Query/Indep.o )
+[15 of 29] Compiling Data.Graph.Inductive.Query.MST ( Data/Graph/Inductive/Query/MST.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Data/Graph/Inductive/Query/MST.o )
+[16 of 29] Compiling Data.Graph.Inductive.Query.MaxFlow2 ( Data/Graph/Inductive/Query/MaxFlow2.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Data/Graph/Inductive/Query/MaxFlow2.o )
+[17 of 29] Compiling Data.Graph.Inductive.Query.Monad ( Data/Graph/Inductive/Query/Monad.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Data/Graph/Inductive/Query/Monad.o )
+[18 of 29] Compiling Data.Graph.Inductive.Query.SP ( Data/Graph/Inductive/Query/SP.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Data/Graph/Inductive/Query/SP.o )
+[19 of 29] Compiling Data.Graph.Inductive.Query.TransClos ( Data/Graph/Inductive/Query/TransClos.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Data/Graph/Inductive/Query/TransClos.o )
+[20 of 29] Compiling Data.Graph.Inductive.Tree ( Data/Graph/Inductive/Tree.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Data/Graph/Inductive/Tree.o )
+[21 of 29] Compiling Data.Graph.Inductive.Example ( Data/Graph/Inductive/Example.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Data/Graph/Inductive/Example.o )
+[22 of 29] Compiling Data.Graph.Inductive.Basic ( Data/Graph/Inductive/Basic.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Data/Graph/Inductive/Basic.o )
+[23 of 29] Compiling Data.Graph.Inductive.Query.DFS ( Data/Graph/Inductive/Query/DFS.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Data/Graph/Inductive/Query/DFS.o )
+[24 of 29] Compiling Data.Graph.Inductive.Query.BCC ( Data/Graph/Inductive/Query/BCC.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Data/Graph/Inductive/Query/BCC.o )
+[25 of 29] Compiling Data.Graph.Inductive.Query.Dominators ( Data/Graph/Inductive/Query/Dominators.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Data/Graph/Inductive/Query/Dominators.o )
+[26 of 29] Compiling Data.Graph.Inductive.Query.GVD ( Data/Graph/Inductive/Query/GVD.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Data/Graph/Inductive/Query/GVD.o )
+[27 of 29] Compiling Data.Graph.Inductive.Query.MaxFlow ( Data/Graph/Inductive/Query/MaxFlow.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Data/Graph/Inductive/Query/MaxFlow.o )
+[28 of 29] Compiling Data.Graph.Inductive.Query ( Data/Graph/Inductive/Query.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Data/Graph/Inductive/Query.o )
+[29 of 29] Compiling Data.Graph.Inductive ( Data/Graph/Inductive.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Data/Graph/Inductive.o )
+Installing library in
+/home/alexandra/.stack/snapshots/x86_64-linux/lts-8.0/8.0.2/lib/x86_64-linux-ghc-8.0.2/fgl-5.5.3.0-2sNS3Wnitgh1EFrdBQMbFh
+Registering fgl-5.5.3.0...
