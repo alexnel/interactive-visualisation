@@ -13,6 +13,9 @@ import System.IO
 import Data.Char
 import Data.List
 import Data.List.Split
+import Data.IORef
+import System.IO.Unsafe 
+import qualified Data.Map as Map
 import Control.Monad
 import Graphics.Gloss.Rendering
 import Graphics.Gloss.Data.Color 
@@ -111,70 +114,84 @@ charCallback window codepoint = do
 
 
 mouseButtonCallback :: G.MouseButtonCallback
-mouseButtonCallback window button action mods = do
+mouseButtonCallback window button action mods= do
   (xpos, ypos) <- G.getCursorPos window 
-  result <- isNode xpos ypos
-  (connectionsRes, name) <- connections result
+  (nameFind,_) <- isNode xpos ypos
+  --(connectionsRes, name) <- connections nameFind
   --when (button == G.MouseButton'1 && action == G.MouseButtonState'Pressed && result /= []) $ print result
-  when (button == G.MouseButton'1 && action == G.MouseButtonState'Pressed && result /= [] && connectionsRes /= 0) $ print ("Number of connections on node " ++ name ++ " is " ++ show connectionsRes)
+  when (button == G.MouseButton'1 && action == G.MouseButtonState'Pressed && nameFind /= "") $ print ("You clicked node " ++ nameFind)
 
 
---calculate the number of conections a node has
-connections :: [String] -> IO (Int, String)
-connections [_, name, _, _] = do
-  contents <- readFileStrict "pos.txt"
-  let dotplain = lines contents
-  return ((countConnections 0 name dotplain), name)
-connections [] = do
-  return (0, "")
+----calculate the number of conections a node has
+--connections :: String -> IO (Int, String)
+--connections name = do
+--  --contents <- readFileStrict "pos.txt"
+--  --let dotplain = lines contents
+--  --return ((countConnections 0 name dotplain), name)
+--  if name == ""
+--    then return (0, "")
+--    else do
+--      dotplain <- readIORef edges
+--      let dotList = Map.toList dotplain
+--      return ((countConnections 0 name dotList), name)
 
 
-countConnections :: Int -> String -> [String] -> Int
-countConnections acc name [] = 0
-countConnections acc name (x:[])
-  | name  `elem` (splitOn " " x) = acc   --not +1 cause of the name in the original node line
-  | otherwise = (acc-1)   --to account for the original node line
-countConnections acc name (x:xs)
-  | name `elem` (splitOn " " x) = countConnections (acc+1) name xs
-  | otherwise = countConnections acc name xs
+--countConnections :: Int -> String -> [(String,String)] -> Int
+--countConnections acc name [] = 0
+--countConnections acc name (x:[])
+--  | name == a || name == b = (acc+1)
+--  | otherwise = acc
+--  where (a,b) = x
+--countConnections acc name (x:xs)
+--  | name == a || name == b = countConnections (acc+1) name xs
+--  | otherwise = countConnections acc name xs
+--  where (a,b) = x
 
 
 -- gnome classes, graphviz functionality --
 -- not working --
 
-gnomes :: Gr Text Text
-gnomes = mkGraph [(1, pack "Hello"), (3, pack "World")] [(1, 3, pack "?")]
+--gnomes :: Gr Text Text
+--gnomes = mkGraph [(1, pack "Hello"), (3, pack "World")] [(1, 3, pack "?")]
 
 
-gnomeParams :: GraphvizParams n Text Text () Text
-gnomeParams = nonClusteredParams {
-  globalAttributes = ga,
-  fmtNode = fn,
-  fmtEdge = fe
-  }
-  where
-    ga = [
-      GraphAttrs [
-         RankDir FromLeft,
-         BgColor [toWColor Transparent]
-         ],
-      NodeAttrs [
-        Shape BoxShape,
-        FillColor [toWColor White],
-        Style [SItem Filled []]
-        ]
-      ]
+--gnomeParams :: GraphvizParams n Text Text () Text
+--gnomeParams = nonClusteredParams {
+--  globalAttributes = ga,
+--  fmtNode = fn,
+--  fmtEdge = fe
+--  }
+--  where
+--    ga = [
+--      GraphAttrs [
+--         RankDir FromLeft,
+--         BgColor [toWColor Transparent]
+--         ],
+--      NodeAttrs [
+--        Shape BoxShape,
+--        FillColor [toWColor White],
+--        Style [SItem Filled []]
+--        ]
+--      ]
 
-    fn (n,l) = [(Label . StrLabel) l]
-    fe (f,t,l) = [(Label . StrLabel) l]
-
-
-wid :: Int 
-wid = 640
+--    fn (n,l) = [(Label . StrLabel) l]
+--    fe (f,t,l) = [(Label . StrLabel) l]
 
 
-hei :: Int
-hei = 480
+scalingFactor :: Float
+scalingFactor = 60.0
+
+
+ab :: IORef (Map.Map Float Float)
+ab = unsafePerformIO $ newIORef Map.empty
+
+
+nodes :: IORef (Map.Map String (Float,Float))
+nodes = unsafePerformIO $ newIORef Map.empty
+
+
+edges :: IORef (Map.Map String String)
+edges = unsafePerformIO $ newIORef Map.empty
 
 
 main :: IO ()
@@ -195,7 +212,8 @@ main = do
 
   -- if init failed, we exit the program
   bool successfulInit exitFailure $ do
-      mw <- G.createWindow wid hei "Simple example, haskell style" Nothing Nothing
+      [(a,b)] <- getAB
+      mw <- G.createWindow (round (a*scalingFactor)) (round (b*scalingFactor)) "Node finder" Nothing Nothing
       maybe' mw (G.terminate >> exitFailure) $ \window -> do
           G.makeContextCurrent mw
           --track activity
@@ -209,16 +227,16 @@ main = do
           G.terminate
           exitSuccess
 
-  --graphviz stuff
-  --not working
-  putStr $ unpack $ renderDot $ toDot $ graphToDot gnomeParams gnomes
-  doDots [ ("test.png" , graphToDot gnomeParams gnomes) ]
+  ----graphviz stuff
+  ----not working
+  --putStr $ unpack $ renderDot $ toDot $ graphToDot gnomeParams gnomes
+  --doDots [ ("test.png" , graphToDot gnomeParams gnomes) ]
 
 
 mainLoop :: G.Window -> State -> String -> IO ()
 mainLoop w glossState filenamePNG = unless' (G.windowShouldClose w) $ do
     (width, height) <- G.getFramebufferSize w
-    let ratio = fromIntegral wid / fromIntegral hei
+    let ratio = fromIntegral width / fromIntegral height
     GL.viewport GL.$= (GL.Position 0 0, GL.Size (fromIntegral width) (fromIntegral height))
     --GL.clear [GL.ColorBuffer]
     
@@ -271,21 +289,22 @@ save x = do
 --input the original size of the image from the .plain file--
 initialiseFile :: [Char] -> [Char] -> IO ()
 initialiseFile a b = do
-  writeFile "pos.txt" (a ++ " " ++ b ++ "\n")
+  let aFloat = if (checkNumber a)
+          then (read a) :: Float
+          else 
+            0
+  let bFloat = if (checkNumber b) 
+            then (read b) :: Float
+            else 
+              0
+  atomicModifyIORef ab (\m -> (Map.insert aFloat bFloat m, ()))
+  --writeFile "pos.txt" (a ++ " " ++ b ++ "\n")
 
 
 --add a node information to the pos.txt file--
 addNode :: [Char] -> String -> String -> IO ()
 addNode name c d = do
-  ab <- getAB
-  let a = if (checkNumber (ab!!0))
-            then (read (ab!!0)) :: Float
-            else 
-              0
-  let b = if (checkNumber (ab!!1))
-            then (read (ab!!1)) :: Float
-            else 
-              0
+  [(a,b)] <- getAB
   let cint = if (checkNumber c) 
               then (read c) :: Float
               else 
@@ -293,13 +312,11 @@ addNode name c d = do
   let dint = if (checkNumber d)
               then (read d) :: Float
               else
-              0
-  let widfloat = fromIntegral wid :: Float
-  let heifloat = fromIntegral hei :: Float
-  let xpos = ((cint/a)*widfloat)
-  let ypos = (((b-dint)/b)*heifloat)
-  appendFile "pos.txt" ("node " ++ name ++ " " ++ show xpos ++ " " ++ show ypos ++ "\n")
-
+                0
+  let xpos = (cint*scalingFactor)
+  let ypos = ((b-dint)*scalingFactor)
+  atomicModifyIORef nodes (\m -> (Map.insert name (xpos,ypos) m, ()))
+  --appendFile "pos.txt" ("node " ++ name ++ " " ++ show xpos ++ " " ++ show ypos ++ "\n")
 
 --check for if it is a double or int--
 checkNumber :: [Char] -> Bool 
@@ -308,17 +325,18 @@ checkNumber (x:xs) = (isDigit x || x == '.') && checkNumber xs
 
 
 --retrieve the original size of the image from the .plain file now stored in the pop.txt file--
-getAB :: IO [[Char]]
+getAB :: IO [(Float,Float)]
 getAB = do
-  contents <- readFileStrict "pos.txt"
-  let dotplain = lines contents
-  let ab = splitOn " " (head dotplain)
-  return ab
+  abVals <- readIORef ab
+  let abList = Map.toList abVals
+  return abList
 
 
 --add edges to the pos.txt file--
 addConnection :: [Char] -> [Char] -> IO ()
-addConnection name1 name2 = appendFile "pos.txt" (name1 ++ " " ++ name2 ++ "\n")
+addConnection name1 name2 = do
+  atomicModifyIORef edges (\m -> (Map.insert name1 name2 m, ()))
+  --appendFile "pos.txt" (name1 ++ " " ++ name2 ++ "\n")
 
 
 --display the original image in the GLFW window--
@@ -331,49 +349,40 @@ displayPic _ = error "only the Bitmap constructor should be used here"
 
 
 --check if the cursor position is sitting on a node--
-isNode :: Double -> Double -> IO [String]
+isNode :: Double -> Double -> IO (String,(Float,Float))
 isNode xpos ypos = do
-  contents <- readFileStrict "pos.txt"
-  let dotplain = lines contents
-  let splice = map (splitOn " ") dotplain
-  let nodes = map extractNode splice
-  let nodesBool = (map (inRange xpos ypos)) nodes
-  let index = elemIndex True nodesBool 
+  --contents <- readFileStrict "pos.txt"
+  --let dotplain = lines contents
+  --let splice = map (splitOn " ") dotplain
+  --let nodes = map extractNode splice
+  --let nodesBool = (map (inRange xpos ypos)) nodes
+  --let index = elemIndex True nodesBool 
+  --if index == Nothing
+  --  then return []
+  --  else return (nodes !!(extractMaybe index))
+  dotplain <- readIORef nodes
+  let dotList = Map.toList dotplain
+  let nodesBool = (map (inRange xpos ypos)) dotList
+
+  let index = elemIndex True nodesBool
+
   if index == Nothing
-    then return []
-    else return (nodes !!(extractMaybe index))
+    then return ("",(0.0,0.0))
+    else return (dotList!!(extractMaybe index))
 
 
 extractMaybe :: Maybe t -> t
 extractMaybe (Just x) = x
 
 
---isolate the node data--
-extractNode :: [String] -> [String]
-extractNode content
-  | "node" `elem` content = content
-  | otherwise = [""]
-
-
 --check if cursor position is within curtain range to node--
-inRange :: Double -> Double -> [String] -> Bool
-inRange xpos ypos [_, _, x, y]
-  | abs(xint - xpos) < 20 && abs(yint - ypos) < 20 = True
+inRange :: Double -> Double -> (String,(Float,Float)) -> Bool
+inRange xpos ypos (_,(x,y))
+  | abs(xint - xpos) < 20 && abs(yint-ypos) < 20 = True
   | otherwise = False
   where
-    xint = if (checkNumber x) 
-            then read x :: Double
-            else 
-              0
-    yint = if (checkNumber y) 
-            then read y :: Double
-            else
-              0
-inRange _ _ [_] = False
-inRange _ _ [] = False
-inRange _ _ [_, _] = False
-inRange _ _ [_, _, _] = False
-inRange _ _ (_:_:_:_:_:_) = False
+    xint = realToFrac x :: Double
+    yint = realToFrac y :: Double
 
 
 --strict file reading

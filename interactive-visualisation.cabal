@@ -29,6 +29,8 @@ executable interactive-visualisation
                        gloss == 1.10.2.5,
                        gloss-rendering  == 1.10.3.5,
                        GLUT == 2.7.0.11,
-                       split
+                       split,
+                       mtl,
+                       containers
   ghc-options:         -O2 -Wall
   other-modules:     WriteRunDot
