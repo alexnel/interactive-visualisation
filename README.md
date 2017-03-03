@@ -3,29 +3,18 @@
 This program takes in a .dot file and displays it graphically. When you click on a node, the nodes name will be printed to screen.
 
 
+This program takes in two arguments
 
-# to run program the first time: 
-
-chmod +x ./runIV.sh
-./run.sh
-
-# to run the program after that in stack:
-
-./run.sh format filename
-
-
-where 
-format is the graphviz dot format you would like to depict.
-        e.g. dot, neato, sfdp, fdo, twopi, circo
+1. format is the graphviz dot format you would like to depict.
+        e.g. dot, neato, sfdp, fdp, twopi, circo
       
-filename is the .dot file you would like to work with.
+2.filename is the .dot file you would like to work with.
         e.g. test.dot
 
 
 
 
-# dependencies:  
-graphviz,
+# dependencies:
 	           text,
 	           fgl,
 	           filepath,
@@ -45,4 +34,4 @@ graphviz,
 
 
 # Please take note:
-This program currently only works for small graphs. I am working to try and fix this.
+This program currently only works for small graphs and crashes after a while... I am working to try and fix this.

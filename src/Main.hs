@@ -1,12 +1,8 @@
 module Main where
 
-import Data.Text.Lazy (Text, pack, unpack)
-import Data.Graph.Inductive (Gr, mkGraph)
 import Graphics.Gloss
 import Graphics.Gloss.Juicy
-import WriteRunDot
 import Control.Monad (unless, when)
-import qualified Graphics.Rendering.OpenGL as GL
 import qualified Graphics.UI.GLFW as G
 import System.Exit
 import System.Environment
@@ -19,49 +15,10 @@ import Data.IORef
 import System.IO.Unsafe 
 import qualified Data.Map as Map
 import Graphics.Gloss.Rendering
---import Control.Concurrent (threadDelay)
+import Control.Concurrent (threadDelay)
+import Control.Concurrent
 import qualified Graphics.UI.GLUT as GLUT
-import Data.GraphViz (
-  GraphvizParams,
-  GlobalAttributes(
-    GraphAttrs,
-    NodeAttrs
-    ),
-  X11Color(Transparent, White),
-  nonClusteredParams,
-  globalAttributes,
-  fmtNode,
-  fmtEdge,
-  graphToDot
-  )
-import Data.GraphViz.Printing (toDot, renderDot)
-import Data.GraphViz.Attributes.Complete (
-  DPoint(DVal),
-  Attribute(
-    Margin,
-    Pad,
-    Center,
-    BgColor,
-    FontSize,
-    Shape,
-    Label,
-    ViewPort,
-    RankDir,
-    Style,
-    FillColor
-    ),
-  Shape(Circle, BoxShape),
-  Label(StrLabel),
-  ViewPort(VP),
-  RankDir(FromLeft),
-  StyleName(Filled),
-  StyleItem(SItem),
-  toWColor,
-  wVal,
-  hVal,
-  zVal,
-  focus
-  )
+import System.Process
 
 
 -- tiny utility functions, in the same spirit as 'maybe' or 'either'
@@ -113,11 +70,12 @@ charCallback _ codepoint = do
 
 mouseButtonCallback :: G.MouseButtonCallback
 mouseButtonCallback window button action _ = do
-  (xpos, ypos) <- G.getCursorPos window 
-  (nameFind,_) <- isNode xpos ypos
-  --(connectionsRes, name) <- connections nameFind
-  --when (button == G.MouseButton'1 && action == G.MouseButtonState'Pressed && result /= []) $ print result
-  when (button == G.MouseButton'1 && action == G.MouseButtonState'Pressed && nameFind /= B.empty) $ putStrLn ("You clicked node " ++ (C.unpack nameFind))
+  when (button == G.MouseButton'1 && action == G.MouseButtonState'Pressed) $ do
+    (xpos, ypos) <- G.getCursorPos window 
+    (nameFind,_) <- isNode xpos ypos
+    --(connectionsRes, name) <- connections nameFind
+    --when (button == G.MouseButton'1 && action == G.MouseButtonState'Pressed && result /= []) $ print result
+    when (nameFind /= B.empty) $ putStrLn ("You clicked node " ++ (C.unpack nameFind))
 
 
 ----calculate the number of conections a node has
@@ -146,35 +104,6 @@ mouseButtonCallback window button action _ = do
 --  where (a,b) = x
 
 
--- gnome classes, graphviz functionality --
--- not working --
-
-gnomes :: Gr Text Text
-gnomes = mkGraph [(1, pack "Hello"), (3, pack "World")] [(1, 3, pack "?")]
-
-
-gnomeParams :: GraphvizParams n Text Text () Text
-gnomeParams = nonClusteredParams {
-  globalAttributes = ga,
-  fmtNode = fn,
-  fmtEdge = fe
-  }
-  where
-    ga = [
-      GraphAttrs [
-         RankDir FromLeft,
-         BgColor [toWColor Transparent]
-         ],
-      NodeAttrs [
-        Shape BoxShape,
-        FillColor [toWColor White],
-        Style [SItem Filled []]
-        ]
-      ]
-
-    fn (_,l) = [(Label . StrLabel) l]
-    fe (_,_,l) = [(Label . StrLabel) l]
-
 
 scalingFactor :: Float
 scalingFactor = 100.0
@@ -188,30 +117,30 @@ nodes :: IORef (Map.Map B.ByteString (Float,Float))
 nodes = unsafePerformIO $ newIORef Map.empty
 
 
-edges :: IORef (Map.Map B.ByteString B.ByteString)
-edges = unsafePerformIO $ newIORef Map.empty
+--edges :: IORef (Map.Map B.ByteString B.ByteString)
+--edges = unsafePerformIO $ newIORef Map.empty
 
-
-extractFirst :: [String] -> String
-extractFirst (x:[]) = x
-extractFirst (x:_) = x
 
 
 main :: IO ()
 main = do 
 
-  --putStrLn "Insert filename, where filename.dot , filename.dot.plain and filename.dot.png exists: "
-  --filenameRead <- getLine
   args <- getArgs
-  let filenameRead = extractFirst args
+  let filenameRead = args!!1
+  let format = args!!0
   let filenamePlain = filenameRead ++ ".plain"
   let filenamePNG = filenameRead ++ ".png"
+  let command1 = format ++ " -Tplain -O " ++ filenameRead
+  let command2 = format ++ " -Tpng -O " ++ filenameRead
 
 
-  --graphviz stuff
-  --not working
-  putStr $ unpack $ renderDot $ toDot $ graphToDot gnomeParams gnomes
-  doDots [ ("test.png" , graphToDot gnomeParams gnomes) ]
+  --generate image from dot file
+  _ <- createProcess (shell command1)
+  _ <- createProcess (shell command2)
+  threadDelay 40000
+
+
+
 
 
 
@@ -228,50 +157,44 @@ main = do
       [(a,b)] <- getAB
       mw <- G.createWindow (round (a*scalingFactor)) (round (b*scalingFactor)) "Node finder" Nothing Nothing
       maybe' mw (G.terminate >> exitFailure) $ \window -> do
-          G.makeContextCurrent mw
-          --track activity
-          G.setKeyCallback window (Just keyCallback)
-          G.setCharCallback window (Just charCallback)
-          --G.setCursorPosCallback window (Just cursorPosCallback)
-          G.setMouseButtonCallback window (Just mouseButtonCallback)
-          --loop main functionality
-          mainLoop window glossState filenamePNG
-          G.destroyWindow window
-          G.terminate
-          exitSuccess
+        G.makeContextCurrent mw
+
+        --track activity
+        G.setKeyCallback window (Just keyCallback)
+        G.setCharCallback window (Just charCallback)
+        --G.setCursorPosCallback window (Just cursorPosCallback)
+        G.setMouseButtonCallback window (Just mouseButtonCallback)
+        
+        --loop main functionality
+        mainLoop window glossState filenamePNG
+        
+        G.destroyWindow window
+        G.terminate
+        exitSuccess
 
 
 
 
 mainLoop :: G.Window -> State -> String -> IO ()
 mainLoop w glossState filenamePNG = unless' (G.windowShouldClose w) $ do
-    --(width, height) <- G.getFramebufferSize w
-    --let ratio = fromIntegral width / fromIntegral height
-    --GL.viewport GL.$= (GL.Position 0 0, GL.Size (fromIntegral width) (fromIntegral height))
-    ----GL.clear [GL.ColorBuffer]
+
     
-    --GL.matrixMode GL.$= GL.Projection
-    --GL.loadIdentity
-    --GL.ortho (negate ratio) ratio (negate 1.0) 1.0 1.0 (negate 1.0)
-    --GL.matrixMode GL.$= GL.Modelview 0
-    
-    --GL.loadIdentity
+    _ <- forkIO $ G.pollEvents
 
     loadJuicyPNG filenamePNG >>= maybe (putStrLn "Couldn't load file") displayPic 
 
     G.swapBuffers w
-    G.pollEvents
+    
+    threadDelay 20000
     mainLoop w glossState filenamePNG
 
 
 --read the original .plain file and extract relivant information
 readfile :: FilePath -> IO ()
 readfile x = do
-  handle <- openFile x ReadMode
-  contents <- B.hGetContents handle
+  contents <- openFile x ReadMode >>= B.hGetContents
   let dotplain = C.splitWith (=='\n') contents
   store dotplain
-  --B.hClose handle 
 
 
 --iterate through list and save data
@@ -285,15 +208,12 @@ store (x:xs) = do
 
 --test for what information the line is giving and write to file
 save :: B.ByteString -> IO ()
-save x = do
-  let allLines = C.split ' ' x
-  if (C.pack "graph") `elem` allLines 
-    then initialiseFile (allLines!!2) (allLines!!3)
-    else if (C.pack "node") `elem` allLines 
-      then addNode (allLines!!1) (allLines!!2) (allLines!!3)
-      else if (C.pack "edge") `elem` allLines
-        then addConnection (allLines!!1) (allLines!!2)
-        else putStrLn "done"
+save x
+  | (C.pack "graph") `elem` allLines = initialiseFile (allLines!!2) (allLines!!3)
+  | (C.pack "node") `elem` allLines = addNode (allLines!!1) (allLines!!2) (allLines!!3)
+--  | (C.pack "edge") `elem` allLines = addConnection (allLines!!1) (allLines!!2)
+  | otherwise = putStrLn "ignore edges"
+  where allLines = C.split ' ' x
 
 
 --input the original size of the image from the .plain file--
@@ -307,7 +227,7 @@ initialiseFile a b = do
             then (read (C.unpack b)) :: Float
             else 
               0
-  atomicModifyIORef ab (\m -> (Map.insert aFloat bFloat m, ()))
+  modifyIORef' ab (\m -> (Map.insert aFloat bFloat m))
   --writeFile "pos.txt" (a ++ " " ++ b ++ "\n")
 
 
@@ -326,7 +246,7 @@ addNode name c d = do
                 0
   let xpos = (cint*scalingFactor)
   let ypos = ((b-dint)*scalingFactor)
-  atomicModifyIORef nodes (\m -> (Map.insert name (xpos,ypos) m, ()))
+  modifyIORef' nodes (\m -> (Map.insert name (xpos,ypos) m))
   --appendFile "pos.txt" ("node " ++ name ++ " " ++ show xpos ++ " " ++ show ypos ++ "\n")
 
 --check for if it is a double or int--
@@ -343,11 +263,11 @@ getAB = do
   return abList
 
 
---add edges to the pos.txt file--
-addConnection :: B.ByteString -> B.ByteString -> IO ()
-addConnection name1 name2 = do
-  atomicModifyIORef edges (\m -> (Map.insert name1 name2 m, ()))
-  --appendFile "pos.txt" (name1 ++ " " ++ name2 ++ "\n")
+----add edges to the pos.txt file--
+--addConnection :: B.ByteString -> B.ByteString -> IO ()
+--addConnection name1 name2 = do
+--  modifyIORef' edges (\m -> (Map.insert name1 name2 m))
+--  --appendFile "pos.txt" (name1 ++ " " ++ name2 ++ "\n")
 
 
 --display the original image in the GLFW window--

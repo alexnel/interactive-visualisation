@@ -18,19 +18,17 @@ executable interactive-visualisation
   main-is:             Main.hs
   default-language:    Haskell2010
   build-depends:       base >= 4 && < 5,
-                       graphviz,
                        text == 1.2.2.1,
                        fgl == 5.5.3.0,
                        filepath == 1.4.1.1,
                        gloss-juicy,
                        GLFW-b == 1.*,
-                       OpenGL == 3.0.1.0,
                        bytestring,
                        gloss == 1.10.2.5,
                        gloss-rendering  == 1.10.3.5,
                        GLUT == 2.7.0.11,
                        split,
                        mtl,
-                       containers
+                       containers,
+                       process
   ghc-options:         -O2 -Wall
-  other-modules:     WriteRunDot
